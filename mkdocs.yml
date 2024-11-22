@@ -1,10 +1,18 @@
 site_name: 鲤鱼的小站
+#site_url: https://lixingjian-c.github.io/ #本地运行注释时
+nav: # 顶部导航栏 (?)
+  - 首页: index.md
+  - 博客:
+      - 博客首页: blog/index.md
+      #- blog/authos.md # 作者信息页,如有即可设置
 theme:
   name: material #主题设置
-  #custom_dir: overrides # 主题扩展(覆写)文件夹
+  #repo_url: https://github.com/lixingjian-C/lixingjian-C.github.io
+  #repo_name: 个人站点
+  custom_dir: overrides # 主题扩展(覆写)文件夹
   icon:
-    logo: material/library #TODO:自己换一个logo，现在使用的是默认的样例logo
-    #favicon: images/favicon.png #TODO:网页标签栏显示的图标，后续进行更换即可
+    logo: material/library #后续可更换一个自己的logo，现在使用的是默认的样例logo
+    #favicon: images/favicon.png #网页标签栏显示的图标，后续进行更换即可
   language: zh #设置语言为简体中文
   palette:
     # 浅色模式
@@ -15,18 +23,21 @@ theme:
         #图标，这里直接使用内嵌的图标库，也可以使用内联svg(?)或自定义图标
         icon: material/toggle-switch-off-outline
         name: 切换到夜间模式
-
+      primary: teal # 顶部导航栏颜色
+      accent: green #可交互元素颜色(如悬停时的颜色)
     # 深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
         icon: material/toggle-switch
         name: 切换到日间模式
+      primary: black
+      accent: light blue
   features:
     - navifation.instant # 即时加载
     - navifation.instant.progress # 页面加载进度条
     - navifation.tracking # 锚点跟踪
-    #- navigation.tabs # 宽度适合时在上方显示导航栏
+    - navigation.tabs # 宽度适合时在上方显示导航栏
     #- navigation.tabs.sticky # 导航栏常驻
     - navigation.sections # 左侧导航标签分组
     #- navigation.expand # 左侧导航栏自动展开
@@ -42,13 +53,31 @@ theme:
     - header.autohide # header滚动时自动隐藏
     #- announce.dismiss # 通知可标记为已读并关闭
     - navigation.footer # 页脚增添上页下页功能
+    - content.tabs.link # (?)
+    - content.code.annotation # (?)
+    - content.code.copy # (?)
 plugins:
   #- privacy #内置隐私插件(?)
   - search #内置搜索插件
-  - blog # TODO:博客插件
+  - blog: # TODO:博客插件
+      blog_dir: . # 更新默认博客目录为 /posts 下的内容
     #写法规范：https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/
   - tags: # Hash Tags
       tags_file: tags.md # 设置标签页
+  - git-revision-date-localized:
+      enable_creation_date: true # 显示文档创建和最后更新时间
+      type: datetime #显示格式
+      #fallback_to_build_date: true # (?)
+  #- offline # 离线可用 (?)
+  - rss: # Blog RSS 源
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories: # (?)
+        - categories
+        - tags
+      comments_path: "#__comments" # (?)
+
 extra:
   #alternate:
   #TODO:语言切换功能
@@ -62,8 +91,41 @@ extra:
       name: Github
     #- X/Twitter
     #- Patron
+  scope: / # 在所有项目中共享用户级设置
+  #consent: # cookie设置,详见https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/
 extra_css:
   - stylesheets/transition-light-dark.css #浅色、深色模式切换过渡效果
 copyright: | # 版权声明
   Copyright &copy; 2024 - 2024 Owen Li. All Rights Reserved.<br>
   Code licensed under the <a href="https://opensource.org/license/MIT target="_blank" rel="noopener">MIT</a> License. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY 4.0</a>.
+markdown_extensions: # 这部分直接抄的官方文档
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  #- pymdownx.emoji: #忽略报错
+  # emoji_index: !!python/name:material.extensions.emoji.twemoji
+  # emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
