@@ -1,8 +1,8 @@
 ---
-draft: true # 标记页面为草稿
+draft: false # 标记页面为草稿
 #date: 2024-11-22
 date:
-  created: 2024-11-22 # 创建日期，每篇博客必须有一个创建日期
+  created: 2024-11-22 # 创建日期,每篇博客日志都必须有一个创建日期,否则就会构建失败
   updated: 2024-11-22 # 最后更新日期
 authors:
   - littlefish # 此处应为.authors.yml文件中的标识符\

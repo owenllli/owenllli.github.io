@@ -57,18 +57,59 @@ theme:
     - content.code.annotation # (?)
     - content.code.copy # (?)
 plugins:
-  #- privacy #内置隐私插件(?)
-  - search #内置搜索插件
-  - blog: # TODO:博客插件
+  - search # 内置搜索插件
+  - blog: # 博客插件
       blog_dir: . # 更新默认博客目录为 /posts 下的内容
-    #写法规范：https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/
+      blog_toc: ture # (?)
+      post_date_format: full # 更改文章的日期格式，与站点配置的语言有关
+      #post_url_date_format: yyyy/MM/dd # 链接后缀 (?)
+      #post_url_format: "{date}/{slug}" # 使用多种占位符组合你的文章URL
+      #post_url_max_categories: 2 # 限制URL中使用的categories数量(如有)
+      #post_slugify: # 使用此条配置更改生成 URL slug 的函数
+      #post_slugify_separator: - # slug 生成时的分隔符
+      #post_excerpt: optional # 文章摘要是否必需
+      #post_excerpt_max_authors: 2 # 限制在文章摘要中显示的作者数量
+      #post_excerpt_max_categories: 2 # 限制在文章摘要中显示的分类数量
+      #post_excerpt_separator: <!-- more --> # 设置在生成文章摘要时要查找的内容分隔符,分隔符前面的内容被视为摘要
+      post_readtime: true # 是否自动计算文章的阅读时间，并在文章摘要及完整文章中显示
+      post_readtime_words_per_minute: 350 # 每分钟阅读多少个单词/汉字 (多语言如何兼容?)
+      archive_name: 归档 #设置归档部分的标题 (?)
+      #archive_date_format: yyyy # 更改归档页面标题的日期格式
+      #archive_url_date_format: yyyy # 更改归档页面 URL 的日期格式
+      #archive_url_format: "archive/{date}" # 更改生成归档页面 URL 时的格式字符串
+      #archive_toc: true # (?)
+      categories_name: 分类页 # 更改导航栏中添加的分类部分的标题
+      #categories_url_format: "category/{slug}" # 更改生成分类页 URL 时使用的格式字符串
+      #categories_slugify: # 更改将分类名称转换为 URL 兼容形式的函数
+      #categories_slugify_separator: - # slug 生成时的分隔符
+      #categories_sort_reverse: true # 分类按降序排列,默认 false 为升序排列
+      categories_allowed: # 预先定义的分类列表
+        # 文章引用不在此列表中的 categories 时会构建失败,分类可通过文章的 categories 元数据属性分配
+        - Sample
+        - Test
+      categories_pagination_per_page: 12 # 更改每个分类页上显示的文章数量 (?)
+      #categories_toc: true # 在分类页上利用目录显示文章标题 (?)
+      pagination_per_page: 12 # 更改每页显示的文章数量
+      #pagination_url_format: "page/{page}" # 更改分页视图的 URL 格式字符串
+      #pagination_format: "~2~" # 使用 paginate 模块通过特殊语法生成分页标记 (?)
+      pagination_if_single_page: true # 当视图仅有一页时是否自动禁用分页
+      #pagination_keep_content: true # 启用或禁用内容的持久性,例如,分页视图是否同时显示其包含视图的内容 (?)
+      draft: ture # 渲染草稿文章,默认不渲染
+      draft_on_serve: false # 在预览站点时是否包含标记为草稿的文章
+      draft_if_future_date: true # 自动将带有未来日期的文章标记为草稿,当到了指定的日期时,除非显示标记为草稿,否则就自动被构建发布
+  #- group # 组插件 (?)
+  #- info # 信息插件 (?)
+  #- offline # 离线可用 (?)
+  - privacy: # 隐私插件(?)
+    enabled: !ENV [CI, false] # 本地构建时禁用插件
+
   - tags: # Hash Tags
       tags_file: tags.md # 设置标签页
   - git-revision-date-localized:
       enable_creation_date: true # 显示文档创建和最后更新时间
       type: datetime #显示格式
       #fallback_to_build_date: true # (?)
-  #- offline # 离线可用 (?)
+
   - rss: # Blog RSS 源
       match_path: blog/posts/.*
       date_from_meta:
@@ -94,7 +135,8 @@ extra:
   scope: / # 在所有项目中共享用户级设置
   #consent: # cookie设置,详见https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/
 extra_css:
-  - stylesheets/transition-light-dark.css #浅色、深色模式切换过渡效果
+  - stylesheets/transition-light-dark.css # 浅色、深色模式切换过渡效果 (未实现)
+  - stylesheets/footer-light.css # 浅色模式时的页脚颜色设置
 copyright: | # 版权声明
   Copyright &copy; 2024 - 2024 Owen Li. All Rights Reserved.<br>
   Code licensed under the <a href="https://opensource.org/license/MIT target="_blank" rel="noopener">MIT</a> License. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY 4.0</a>.
@@ -115,9 +157,9 @@ markdown_extensions: # 这部分直接抄的官方文档
       smart_enable: all
   - pymdownx.caret
   - pymdownx.details
-  #- pymdownx.emoji: #忽略报错
-  # emoji_index: !!python/name:material.extensions.emoji.twemoji
-  # emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.emoji: #忽略报错
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
