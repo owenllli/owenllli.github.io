@@ -57,10 +57,9 @@ theme:
     - content.code.annotation # (?)
     - content.code.copy # (?)
 plugins:
-  - search # 内置搜索插件
   - blog: # 博客插件
       blog_dir: . # 更新默认博客目录为 /posts 下的内容
-      blog_toc: ture # (?)
+      blog_toc: true # (?)
       post_date_format: full # 更改文章的日期格式，与站点配置的语言有关
       #post_url_date_format: yyyy/MM/dd # 链接后缀 (?)
       #post_url_format: "{date}/{slug}" # 使用多种占位符组合你的文章URL
@@ -87,29 +86,33 @@ plugins:
         # 文章引用不在此列表中的 categories 时会构建失败,分类可通过文章的 categories 元数据属性分配
         - Sample
         - Test
-      categories_pagination_per_page: 12 # 更改每个分类页上显示的文章数量 (?)
+      # categories_pagination_per_page: 12 # Insiders Only,更改每个分类页上显示的文章数量 (?)
       #categories_toc: true # 在分类页上利用目录显示文章标题 (?)
       pagination_per_page: 12 # 更改每页显示的文章数量
       #pagination_url_format: "page/{page}" # 更改分页视图的 URL 格式字符串
       #pagination_format: "~2~" # 使用 paginate 模块通过特殊语法生成分页标记 (?)
       pagination_if_single_page: true # 当视图仅有一页时是否自动禁用分页
       #pagination_keep_content: true # 启用或禁用内容的持久性,例如,分页视图是否同时显示其包含视图的内容 (?)
-      draft: ture # 渲染草稿文章,默认不渲染
+      draft: true # 渲染草稿文章,默认不渲染
       draft_on_serve: false # 在预览站点时是否包含标记为草稿的文章
       draft_if_future_date: true # 自动将带有未来日期的文章标记为草稿,当到了指定的日期时,除非显示标记为草稿,否则就自动被构建发布
   #- group # 组插件 (?)
   #- info # 信息插件 (?)
   #- offline # 离线可用 (?)
-  - privacy: # 隐私插件(?)
-    enabled: !ENV [CI, false] # 本地构建时禁用插件
-
+  #- privacy: # 隐私插件(?)
+  #enabled: !ENV [CI, false] # 本地构建时禁用插件
+  - search: # 内置搜索插件
+      lang: # 设置个语言会增加网页构建的js文件的大小,酌情设置
+        - zh # 增加对简体中文的搜索支持
+        - en # 增加对英文的搜索支持
+      #jieba_dic: dic.txt.small # jieba库提供的中文文本分词字典
+  #- social # TODO:生成自己网页的社交卡片
   - tags: # Hash Tags
       tags_file: tags.md # 设置标签页
   - git-revision-date-localized:
       enable_creation_date: true # 显示文档创建和最后更新时间
       type: datetime #显示格式
       #fallback_to_build_date: true # (?)
-
   - rss: # Blog RSS 源
       match_path: blog/posts/.*
       date_from_meta:
@@ -139,7 +142,7 @@ extra_css:
   - stylesheets/footer-light.css # 浅色模式时的页脚颜色设置
 copyright: | # 版权声明
   Copyright &copy; 2024 - 2024 Owen Li. All Rights Reserved.<br>
-  Code licensed under the <a href="https://opensource.org/license/MIT target="_blank" rel="noopener">MIT</a> License. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY 4.0</a>.
+  Code licensed under the <a href="https://opensource.org/license/MIT target="_blank" rel="noopener">MIT License</a>. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY 4.0</a>.
 markdown_extensions: # 这部分直接抄的官方文档
   # Python Markdown
   - abbr
