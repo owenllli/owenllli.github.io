@@ -173,7 +173,12 @@ markdown_extensions: # 这部分直接抄的官方文档
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: # 忽略报错
+            !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify # 忽略报错
@@ -182,3 +187,4 @@ markdown_extensions: # 这部分直接抄的官方文档
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - tables

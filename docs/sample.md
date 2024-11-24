@@ -714,3 +714,285 @@ TODO:未验证如何嵌套多层选项卡
             一层楼
 
 ## Data tables 数据表
+
+Material for MkDocs 为数据表格定义了默认样式，这是一种在项目文档中呈现表格数据的极佳方式。此外，通过引入第三方库和额外的 JavaScript，还可以实现可排序表格等自定义功能。
+
+### 使用方法
+
+数据表格可以在项目文档的任何位置使用，支持包含内联代码块、图标以及表情符号等任意的 Markdown 内容。
+
+```Markdown title="数据表"
+<!-- (1)! -->
+| 作者 | 诗篇|
+<!-- (2)! -->
+| --- | --- |
+| 李白 | 《将进酒》|
+| 杜甫 | 《春望》  |
+| 韩愈 | 《师说》  |
+```
+
+1. 这些`|`分隔符不对齐也是可以的
+2. 这些`-`想写多少都可以，甚至只有一个也是可以的
+
+| 作者 | 诗篇|
+| --- | --- |
+| 李白 | 《将进酒》|
+| 杜甫 | 《春望》  |
+| 韩愈 | 《师说》  |
+
+#### 对齐方式
+
+如果你需要将某一列的内容对齐到左侧、居中或右侧，可以在分隔符中使用 `:` 来实现。
+
+=== "左侧对齐"
+
+    ``` markdown hl_lines="2" title="左侧对齐的数据表"
+    | 作者 | 诗篇|
+    | :--- | :--- |
+    | 李白 | 《将进酒》|
+    | 杜甫 | 《春望》  |
+    | 韩愈 | 《师说》  |
+    ```
+
+    | 作者 | 诗篇|
+    | :--- | :--- |
+    | 李白 | 《将进酒》|
+    | 杜甫 | 《春望》  |
+    | 韩愈 | 《师说》  |
+
+=== "居中对齐"
+
+    ``` markdown hl_lines="2" title="居中对齐的数据表"
+    | 作者 | 诗篇|
+    | :--: | :--: |
+    | 李白 | 《将进酒》|
+    | 杜甫 | 《春望》  |
+    | 韩愈 | 《师说》  |
+    ```
+
+    | 作者 | 诗篇|
+    | :--: | :--: |
+    | 李白 | 《将进酒》|
+    | 杜甫 | 《春望》  |
+    | 韩愈 | 《师说》  |
+
+=== "靠右对齐"
+
+    ``` markdown hl_lines="2" title="靠右对齐的数据表"
+    | 作者 | 诗篇|
+    | ---: | ---: |
+    | 李白 | 《将进酒》|
+    | 杜甫 | 《春望》  |
+    | 韩愈 | 《师说》  |
+    ```
+
+    | 作者 | 诗篇|
+    | ---: | ---: |
+    | 李白 | 《将进酒》|
+    | 杜甫 | 《春望》  |
+    | 韩愈 | 《师说》  |
+
+### 自定义设置
+
+#### 表格排序
+
+如果需要让数据表格支持排序，可以引入 `tablesort`，该功能已与 Material for MkDocs 原生集成，并通过额外的 JavaScript 支持即时加载。详见[Sortable tables](https://squidfunk.github.io/mkdocs-material/reference/data-tables/#sortable-tables).
+更多关于 `tablesort` 的内容详见[tablesort](https://tristen.ca/tablesort/demo/).
+
+#### 从外部文件导入表格
+
+使用插件[mkdocs-table-reader-plugin](https://timvink.github.io/mkdocs-table-reader-plugin/)，使得你能够从一个CSV或Excel文件中导入一个表格。
+
+## Diagrams 图表
+
+图表可以帮助传达不同技术组件之间复杂的关系和相互连接，是项目文档的极佳补充。Material for MkDocs 集成了 Mermaid.js，这是一个非常流行且灵活的绘图工具。下面的使用方法也都是基于 Mermaid 的语法进行的，Mermain的教程可以[在此处查看](https://mermaid.js.org/ecosystem/tutorials.html)。
+TODO:学会怎么使用Mermaid画图
+
+### 使用方法
+
+#### 流程图(Flowcharts)
+
+流程图用于表示工作流或过程。步骤会以各种节点形式呈现，并通过边连接，描述步骤的执行顺序。
+
+```` markdown title="流程图"
+``` mermaid
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay!];
+```
+````
+
+``` mermaid
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay!];
+```
+
+#### 序列图(Sequence Diagrams)
+
+序列图描述了多个对象或参与者之间的交互顺序，以及它们之间的信息交换。
+
+```` markdown title="序列图"
+``` mermaid
+sequenceDiagram
+  autonumber
+  Alice->>John: Hello John, how are you?
+  loop Healthcheck
+      John->>John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts!
+  John-->>Alice: Great!
+  John->>Bob: How about you?
+  Bob-->>John: Jolly good!
+```
+````
+
+``` mermaid
+sequenceDiagram
+  autonumber
+  Alice->>John: Hello John, how are you?
+  loop Healthcheck
+      John->>John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts!
+  John-->>Alice: Great!
+  John->>Bob: How about you?
+  Bob-->>John: Jolly good!
+```
+
+#### 状态图(State Diagrams)
+
+状态图用于描述系统的行为，将其分解为有限数量的状态及状态之间的转换。
+
+```` markdown title="状态图"
+``` mermaid
+stateDiagram-v2
+  state fork_state <<fork>>
+    [*] --> fork_state
+    fork_state --> State2
+    fork_state --> State3
+
+    state join_state <<join>>
+    State2 --> join_state
+    State3 --> join_state
+    join_state --> State4
+    State4 --> [*]
+```
+````
+
+``` mermaid
+stateDiagram-v2
+  state fork_state <<fork>>
+    [*] --> fork_state
+    fork_state --> State2
+    fork_state --> State3
+
+    state join_state <<join>>
+    State2 --> join_state
+    State3 --> join_state
+    join_state --> State4
+    State4 --> [*]
+```
+
+#### 类图(Class Diagrams)
+
+类图是面向对象编程的核心，用于通过建模类及它们之间的关系来描述系统结构。
+
+```` markdown title="类图"
+``` mermaid
+classDiagram
+  Person <|-- Student
+  Person <|-- Professor
+  Person : +String name
+  Person : +String phoneNumber
+  Person : +String emailAddress
+  Person: +purchaseParkingPass()
+  Address "1" <-- "0..1" Person:lives at
+  class Student{
+    +int studentNumber
+    +int averageMark
+    +isEligibleToEnrol()
+    +getSeminarsTaken()
+  }
+  class Professor{
+    +int salary
+  }
+  class Address{
+    +String street
+    +String city
+    +String state
+    +int postalCode
+    +String country
+    -validate()
+    +outputAsLabel()  
+  }
+```
+````
+
+``` mermaid
+classDiagram
+  Person <|-- Student
+  Person <|-- Professor
+  Person : +String name
+  Person : +String phoneNumber
+  Person : +String emailAddress
+  Person: +purchaseParkingPass()
+  Address "1" <-- "0..1" Person:lives at
+  class Student{
+    +int studentNumber
+    +int averageMark
+    +isEligibleToEnrol()
+    +getSeminarsTaken()
+  }
+  class Professor{
+    +int salary
+  }
+  class Address{
+    +String street
+    +String city
+    +String state
+    +int postalCode
+    +String country
+    -validate()
+    +outputAsLabel()  
+  }
+```
+
+#### 实体关系图(E-R图, Entity-Relationship Diagrams)
+
+实体关系图由实体类型组成，并描述实体之间的关系，常用于特定领域的知识建模。
+
+```` markdown title="E-R图"
+``` mermaid
+erDiagram
+  CUSTOMER ||--o{ ORDER : places
+  ORDER ||--|{ LINE-ITEM : contains
+  LINE-ITEM {
+    string name
+    int pricePerUnit
+  }
+  CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+```
+````
+
+``` mermaid
+erDiagram
+  CUSTOMER ||--o{ ORDER : places
+  ORDER ||--|{ LINE-ITEM : contains
+  LINE-ITEM {
+    string name
+    int pricePerUnit
+  }
+  CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+```
+
+#### 其他类型的图表
+
+除了上述类型，Mermaid.js 还支持饼图、甘特图、用户旅程、Git 图及需求图。然而，Material for MkDocs 对这些图表的支持有限，尤其是在移动端的表现不佳，因此不建议使用这些图表。
+另外，虽然 Mermaid.js 的所有功能应开箱即用，但 Material for MkDocs 当前仅为流程图、序列图、类图、状态图和实体关系图调整了字体和颜色。
