@@ -13,6 +13,7 @@ theme:
   icon:
     logo: material/library #后续可更换一个自己的logo，现在使用的是默认的样例logo
     #favicon: images/favicon.png #网页标签栏显示的图标，后续进行更换即可
+    #annotation: material/plus-circle # 注解的图标，可自行更改
   language: zh #设置语言为简体中文
   palette:
     # 浅色模式
@@ -53,9 +54,9 @@ theme:
     - header.autohide # header滚动时自动隐藏
     #- announce.dismiss # 通知可标记为已读并关闭
     - navigation.footer # 页脚增添上页下页功能
-    - content.tabs.link # (?)
-    - content.code.annotation # (?)
-    - content.code.copy # (?)
+    #- content.tabs.link # 选项卡关联
+    - content.code.annotation # 代码块注释支持
+    - content.code.copy # 代码块全局显示复制按钮
 plugins:
   - blog: # 博客插件
       blog_dir: . # 更新默认博客目录为 /posts 下的内容
@@ -160,17 +161,24 @@ markdown_extensions: # 这部分直接抄的官方文档
       smart_enable: all
   - pymdownx.caret
   - pymdownx.details
-  - pymdownx.emoji: #忽略报错
+  - pymdownx.emoji: # 忽略报错
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify # 忽略报错
+        kwds:
+          case: lower
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
