@@ -57,6 +57,7 @@ theme:
     #- content.tabs.link # 选项卡关联
     - content.code.annotation # 代码块注释支持
     - content.code.copy # 代码块全局显示复制按钮
+    - content.tooltips # (?)
 plugins:
   - blog: # 博客插件
       blog_dir: . # 更新默认博客目录为 /posts 下的内容
@@ -141,6 +142,9 @@ extra:
 extra_css:
   - stylesheets/transition-light-dark.css # 浅色、深色模式切换过渡效果 (未实现)
   - stylesheets/footer-light.css # 浅色模式时的页脚颜色设置
+extra_javascript:
+  - javascripts/mathjax.js # MathJax 渲染支持
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # MathJax 渲染支持
 copyright: | # 版权声明
   Copyright &copy; 2024 - 2024 Owen Li. All Rights Reserved.<br>
   Code licensed under the <a href="https://opensource.org/license/MIT target="_blank" rel="noopener">MIT License</a>. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY 4.0</a>.

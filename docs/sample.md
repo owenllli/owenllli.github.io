@@ -1522,3 +1522,239 @@ Markdown 语法本身并不支持给图片添加标题，但我们可以借助 H
 > 如果你自定义了颜色方案，请参看[Custom light scheme](https://squidfunk.github.io/mkdocs-material/reference/images/#light-and-dark-mode-custom-light-scheme)和[Custom dark scheme](https://squidfunk.github.io/mkdocs-material/reference/images/#light-and-dark-mode-custom-dark-scheme).
 
 ## Lists 列表
+
+Material for MkDocs 支持多种列表格式，以满足不同的使用场景，包括通过标准 Markdown 支持的无序列表(unordered lists)和有序列表(ordered lists)，以及通过扩展支持的定义列表(definition lists)和任务列表(task lists)。
+
+### 使用方法
+
+#### 无序列表
+
+无序列表可以通过在每行前加上 -、* 或 + 创建，这些符号用哪个都可以，你可以任意选择(当然，建议同级列表仅使用同种符号)。此外，各种类型的列表支持嵌套使用。
+
+``` markdown title="无序列表"
+- 《江城子》
+    * 苏轼
+        + 试问江南诸伴侣，谁似我，醉扬州。
+* 《饮中八仙歌》
+    - 杜甫
+        * 李白斗酒诗百篇，长安市上酒家眠。
+        * 天子呼来不上船，自称臣是酒中仙。
+```
+
+- 《江城子》
+  - 苏轼
+    - 试问江南诸伴侣，谁似我，醉扬州。
+- 《饮中八仙歌》
+  - 杜甫
+    - 李白斗酒诗百篇，长安市上酒家眠。
+    - 天子呼来不上船，自称臣是酒中仙。
+
+#### 有序列表
+
+有序列表必须以数字开头，并紧跟一个点号 `.`。数字无需主动设置序号，可以都设置为 `1.`，渲染时会自动编号。
+
+``` markdown title="有序列表"
+1. 唐朝
+
+    1. 李商隐《锦瑟》
+
+        1. 锦瑟无端五十弦，一弦一柱思华年。
+        2. 庄生晓梦迷蝴蝶，望帝春心托杜鹃。
+        3. 沧海月明珠有泪，蓝田日暖玉生烟。
+        4. 此情可待成追忆，只是当时已惘然。
+
+
+    2. 孟郊《登科后》
+
+        1. 昔日龌龊不足夸，今朝放荡思无涯。
+
+        2. 春风得意马蹄疾，一日看尽长安花。
+```
+
+1. 唐朝
+
+    1. 李商隐《锦瑟》
+
+        1. 锦瑟无端五十弦，一弦一柱思华年。
+        2. 庄生晓梦迷蝴蝶，望帝春心托杜鹃。
+        3. 沧海月明珠有泪，蓝田日暖玉生烟。
+        4. 此情可待成追忆，只是当时已惘然。
+
+    2. 孟郊《登科后》
+
+        1. 昔日龌龊不足夸，今朝放荡思无涯。
+
+        2. 春风得意马蹄疾，一日看尽长安花。
+
+#### 定义列表
+
+启用拓展后，可以使用简单的语法枚举任意键值对，例如函数或模块的参数等。
+
+``` markdown title="定义列表"
+`bool isEmpty(tree root)`
+
+:   检测是否以root为根节点的树是否为空树
+
+`int getIndex(int val)`
+:   返回val在数组中的下标值，找不到则返回-1
+
+```
+
+`bool isEmpty(tree root)`
+
+:   检测是否以root为根节点的树是否为空树
+
+`int getIndex(int val)`
+:   返回val在数组中的下标值，找不到则返回-1
+
+#### 任务列表
+
+启用拓展后，无序列表项前可加上 `[ ]` 表示未完成，或者 `[x]` 来表示已完成，以此来形成一份任务列表。
+
+``` markdown title="任务列表"
+* [x] 每天背单词
+* [ ] 学会做荤菜
+    * [x] 学会做鱼香肉丝
+    * [x] 学会做宫保鸡丁
+    * [ ] 学会做锅包肉
+* [ ] 学会基本的 Markdown 语法
+```
+
+<!-- 忽略 TODO Tree 带来的高亮，目前还没看怎么才能忽略掉 -->
+- [x] 每天背单词
+- [ ] 学会做荤菜
+  - [x] 学会做鱼香肉丝
+  - [x] 学会做宫保鸡丁
+  - [ ] 学会做锅包肉
+- [ ] 学会基本的 Markdown 语法
+
+## Math 数学功能
+
+### 配置项
+
+#### 可选的库
+
+`MathJax` 和 `KaTeX` 是两个流行的数学公式渲染库，用于在浏览器中显示数学内容。虽然两者提供类似的功能，但它们使用不同的语法并具有不同的配置选项。本章提供了如何将它们与 Material for MkDocs 集成的有关信息。
+
+- MathJax 是一个功能强大且灵活的库，支持多种输入格式（如 LaTeX、MathML、AsciiMath）和输出格式（如 HTML、SVG、MathML）。
+
+- KaTeX 是一个轻量级的库，专注于速度和简单性。它支持 LaTeX 语法的子集，并能够将数学公式渲染为 HTML 或 SVG。
+
+本网页使用 `MathJax` 进行数学公式的渲染。
+
+#### 二者对比
+
+在决定使用 MathJax 还是 KaTeX 时，有几个关键的因素需要考虑：
+
+- __速度__：KaTeX 通常比 MathJax 更快。如果您的网站需要快速渲染大量复杂公式，KaTeX 可能是更好的选择。
+
+- __语法支持__：MathJax 支持更广泛的 LaTeX 命令，并且可以处理多种数学标记语言（如 AsciiMath 和 MathML）。如果您需要高级的 LaTeX 功能，MathJax 或许更合适。
+
+- __输出格式__：两者都支持 HTML 和 SVG 输出。然而，MathJax 还提供 MathML 输出，这对于可访问性很重要，因为屏幕阅读器可以读取 MathML。
+
+- __可配置性__：MathJax 提供更多的配置选项，使用户能够更精确地控制其行为。如果您有特定的渲染需求，MathJax 可能是更灵活的选择。
+
+- __浏览器支持__：虽然两个库在现代浏览器中都表现良好，MathJax 对旧版浏览器的兼容性更好。如果您的受众使用各种浏览器（包括旧版），MathJax 可能更安全。
+
+总结：KaTeX 以速度和简洁著称，而 MathJax 提供更多功能和更好的兼容性，但速度较慢。选择使用哪一个主要取决于您的具体需求和限制。
+
+### 使用方法
+
+#### 块级元素
+
+块级数学公式必须用 `#!latex $$...$$` 或 `#!latex \[\]` 包裹，并占用单独的行。
+
+``` latex title="块级数学公式"
+$$
+\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
+$$
+```
+
+$$
+\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
+$$
+
+#### 内联行内元素
+
+行内数学公式必须用 `#!latex $...$` 或 `#!latex \(...\)` 包裹。
+
+``` latex title="行内数学公式"
+设 $n$ 是偶数, 则 $\exists \in \mathbb{Z}$, 使得 $n = 2k$. 反之, 若 $\exists k \in \mathbb{Z}$, 使得 $n = 2k$, 则 $n$ 为偶数.
+```
+
+设 $n$ 是偶数, 则 $\exists k \in \mathbb{Z}$, 使得 $n = 2k$. 反之, 若 $\exists k \in \mathbb{Z}$, 使得 $n = 2k$, 则 $n$ 为偶数.
+
+## Tooltips 提示信息
+
+技术文档中人们通常会使用许多缩写，而对于一些项目的新用户来说，这些缩写可能需要额外的解释。为了解决这个问题，Material for MkDocs 使用了一系列 Markdown 扩展来实现全站范围的术语表功能。
+
+### 配置项
+
+#### 改进的提示信息
+
+在启用该项功能后，Material for MkDocs 会用更美观的小型工具提示替代浏览器对 title 属性的渲染逻辑。(?)
+
+启用后，工具提示将应用于以下元素：
+
+- __内容部分__：带有 `title` 属性的元素、永久链接和代码复制按钮。
+
+- __页眉部分__：主页按钮、标题、配色方案切换器和代码库链接。
+
+- __导航部分__：被省略号缩短的链接（如 `...`）。
+
+### 使用方法
+
+#### 添加提示信息
+
+##### 超链接
+
+Markdown 语法允许为每个链接指定 title 属性，当启用了改进的信息提示后，这些 title 属性将显示为精美的工具提示。
+
+``` markdown title="行内语法的具有提示信息的超链接"
+[把鼠标悬停在超链接上面](#添加提示信息 "这里是提示信息")
+```
+
+[把鼠标悬停在超链接上面](#添加提示信息 "这里是提示信息")
+
+你还可以使用引用超链接，示例如下。
+
+``` markdown title="使用引用超链接的具有提示信息的超链接"
+[把鼠标悬停在超链接上面][hoveringInfo]
+
+    [hoveringInfo]: #添加提示信息 "这里是提示信息"
+```
+
+[把鼠标悬停在超链接上面][hoveringInfo]
+
+    [hoveringInfo]: #添加提示信息 "这里是提示信息"
+
+##### 其他元素
+
+对于其他元素，可以通过启用 `Attribute Lists` 扩展来为元素添加提示信息。
+
+``` markdown title="带提示信息的图标"
+:material-information-outline:{ title="Important information" }
+```
+
+:material-information-outline:{ title="Important information" }
+
+#### 添加缩写提示
+
+缩写提示是一种类似于 URL 和脚注的特殊语法，可以为文本中的术语或缩写定义工具提示。其语法类似如下示例。
+
+``` markdown title="缩写示例"
+HTML 规范目前正在由 W3C 维护.
+
+<!-- 方括号内的是想要说明的缩写，冒号后面跟着的即为缩写的全称解释 -->
+*[HTML]: Hyper Text Markup Language, 超文本标记语言
+*[W3C]: World Wide Web Consortium, 万维网联盟
+```
+
+HTML 规范目前正在由 W3C 维护.
+
+*[HTML]: Hyper Text Markup Language, 超文本标记语言
+*[W3C]: World Wide Web Consortium, 万维网联盟
+
+#### 添加术语表
+
+如果你有为所有网页的同一术语都添加提示信息，那么你可能需要新建一个术语表。详情可见[Adding a glossary](https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-a-glossary).
