@@ -1,10 +1,31 @@
 site_name: 鲤鱼的小站
-#site_url: https://lixingjian-c.github.io/ #本地运行注释时
-nav: # 顶部导航栏 (?)
+#site_url: https://lixingjian-c.github.io/ #本地运行时注释掉
+nav: # 配置网页体系
   - 首页: index.md
   - 博客:
-      - 博客首页: blog/index.md
+      - blog/index.md
       #- blog/authos.md # 作者信息页,如有即可设置
+      - 博客测试页面: blog/posts/blogSample.md
+  - 语言:
+      - language/index.md
+      - Markdown 基本语法:
+          - language/markdown/index.md
+          - 警示块: language/markdown/admonitions.md
+          - 注解: language/markdown/annotations.md
+          - 按钮: language/markdown/buttons.md
+          - 代码块: language/markdown/code-blocks.md
+          - 选项卡: language/markdown/content-tabs.md
+          - 数据表: language/markdown/data-tables.md
+          - 图表: language/markdown/diagrams.md
+          - 脚注: language/markdown/footnotes.md
+          - 设置格式: language/markdown/formatting.md
+          - 网格: language/markdown/grid.md
+          - 图标和表情: language/markdown/icons-and-emojis.md
+          - 图片: language/markdown/images.md
+          - 列表: language/markdown/lists.md
+          - 数学功能: language/markdown/math.md
+          - 提示信息: language/markdown/tooltips.md
+  - 标签页: tags.md
 theme:
   name: material #主题设置
   #repo_url: https://github.com/lixingjian-C/lixingjian-C.github.io
@@ -46,7 +67,7 @@ theme:
     - navigation.prune # 导航精简，减少构建网页时的消耗
     #- navigation.indexes # (?)
     - toc.follow # (?)
-    - toc.integrate # 两侧的toc集成到左侧
+    #- toc.integrate # 两侧的toc集成到左侧
     - navigation.top # 返回顶部按钮，仅在上划时出现
     - search.suggest # 搜索建议候选
     #- search.highlight # 搜索到的结果在打开的页面内高亮
