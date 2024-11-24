@@ -996,3 +996,529 @@ erDiagram
 
 除了上述类型，Mermaid.js 还支持饼图、甘特图、用户旅程、Git 图及需求图。然而，Material for MkDocs 对这些图表的支持有限，尤其是在移动端的表现不佳，因此不建议使用这些图表。
 另外，虽然 Mermaid.js 的所有功能应开箱即用，但 Material for MkDocs 当前仅为流程图、序列图、类图、状态图和实体关系图调整了字体和颜色。
+
+## Footnotes 脚注
+
+### 使用方法
+
+#### 添加脚注
+
+脚注引用必须用方括号包裹，并以插入符号 `^` 开头，后接任意标识符，其语法类似于标准 Markdown 链接。
+
+``` markdown title="脚注示例"
+关关[^1]雎鸠[^2]，在河之洲。窈窕淑女，君子好逑。[^3]
+```
+
+关关[^1]雎鸠[^2]，在河之洲。窈窕淑女，君子好逑。[^3]
+
+脚注内容必须使用与引用相同的标识符进行声明。它可以插入在文档中的任意位置，但最终总是会被渲染在页面的底部。此外，脚注内容会自动生成相对应的反向链接。
+
+``` markdown title="单行脚注"
+<!-- 单行注释 -->
+[^1]: 关关：象声词，雌雄二鸟相互应和的叫声。
+[^2]: 雎鸠：一种水鸟，一般认为就是鱼鹰，传说它们雌雄形影不离。
+```
+
+[:octicons-arrow-down-24: 跳转到脚注1](#fn:1)
+
+[:octicons-arrow-down-24: 跳转到脚注2](#fn:2)
+
+``` markdown title="多行脚注"
+<!-- 多行注释，需要缩进 -->
+[^3]:
+    《周南·关雎》是中国古代第一部诗歌总集《诗经》中的第一首诗，通常认为这是描写男女恋爱的情歌。此诗首章以关雎鸟相向合鸣，相依相恋，兴起淑女配君子的联想；以下各章，又以采荇菜这一行为兴起主人公对女子疯狂的相思与追求。全诗情文并茂，在艺术上巧妙地采用了“兴”的表现手法，语言优美，善于运用双声叠韵和重章叠词，增强了诗歌的音韵美和写人状物、拟声传情的生动性。
+```
+
+[:octicons-arrow-down-24: 跳转到脚注3](#fn:3)
+
+[^1]: 关关：象声词，雌雄二鸟相互应和的叫声。
+[^2]: 雎鸠：一种水鸟，一般认为就是鱼鹰，传说它们雌雄形影不离。
+[^3]:
+    《周南·关雎》是中国古代第一部诗歌总集《诗经》中的第一首诗，通常认为这是描写男女恋爱的情歌。此诗首章以关雎鸟相向合鸣，相依相恋，兴起淑女配君子的联想；以下各章，又以采荇菜这一行为兴起主人公对女子疯狂的相思与追求。全诗情文并茂，在艺术上巧妙地采用了“兴”的表现手法，语言优美，善于运用双声叠韵和重章叠词，增强了诗歌的音韵美和写人状物、拟声传情的生动性。
+
+#### 跳转到脚注
+
+你可以使用超链接搭配脚注标识符 `fn` 来快捷跳转，你已经在上面见过效果了，其markdown实现如下：
+
+``` markdown title="跳转到脚注"
+[:octicons-arrow-down-24: Jump to footnote](#fn:1)
+[:octicons-arrow-down-24: Jump to footnote](#fn:1)[:octicons-arrow-down-24: Jump to footnote](#fn:1)
+```
+
+## Formatting 设置格式
+
+Material for MkDocs 支持多种 HTML 元素，可用于突出文档中的部分内容或应用特定的格式。此外，还支持 `Critic Markup`，可以显示文档的建议更改内容。
+TODO:进一步了解，目前有些不理解
+
+### 使用方法
+
+#### 高亮更改内容
+
+启用 Critic 后，可以使用 Critic Markup，从而突出显示建议的更改并在文档中添加内联评论。
+
+``` text title="格式设置样例"
+文本可以被{--删除--}，还可以被{++添加++}。这些格式特性还可以被{~~结合进~>结合在~~}一个单独的表达式中。你还可以利用此扩展{==高亮==}一些内容{>>而且你还可以在这里塞一些内联评论<<}。
+
+{==
+
+格式化也可以应用于块级内容：
+将起始和结束标记放在单独的行上，并在标记与内容之间添加新行即可。
+
+==}
+```
+
+上面的语法渲染结果如下：
+
+文本可以被{--删除--}，还可以被{++添加++}。这些格式特性还可以被{~~结合进~>结合在~~}一个单独的表达式中。你还可以利用此扩展{==高亮==}一些内容{>>而且你还可以在这里塞一些内联评论<<}。
+
+{==
+
+格式设置也可以应用于块级内容。
+将起始和结束标记放在单独的行上，并在标记与内容之间间隔一行即可。
+
+==}
+
+#### 高亮文本内容
+
+启用 Caret、Mark 和 Tilde 后，可以通过简单的语法高亮文本，这种方法比直接使用 HTML 标签（如 `<mark>`、`<ins>`、`<del>`）要便捷些。
+
+``` text title="格式设置样例"
+- ==这部分等同于HTML的`<mark>`标签(高亮)==
+- ^^这部分等同于HTML的`<ins>`标签(下划线)^^
+- ~~这部分等同于HTML的`<del>`标签(删除线)~~
+```
+
+渲染结果如下：
+
+- ==这部分等同于HTML的`<mark>`标签(高亮)==
+- ^^这部分等同于HTML的`<ins>`标签(下划线)^^
+- ~~这部分等同于HTML的`<del>`标签(删除线)~~
+
+#### 上下标
+
+启用 Caret 和 Tilde 后，可以通过简单的语法实现上下标。类似地，这比直接使用 HTML 标签（如 `<sub>`、`<sup>`）要更便捷些。
+
+``` markdown title="格式设置样例"
+<!-- 下标 -->
+- H~2~O
+<!-- 上标 -->
+- A^T^A
+```
+
+渲染结果如下：
+
+- H~2~O
+- A^T^A
+
+#### 添加键盘按键
+
+未做研究，详见[Adding keyboard keys](https://squidfunk.github.io/mkdocs-material/reference/formatting/#adding-keyboard-keys).
+
+## Grid 网格
+
+Material for MkDocs 让您可以轻松将部分内容排布成网格，用于对表达相似意义或具有同等重要性的模块进行分组。网格布局非常适合构建索引页面，以简要概览文档的某一大部分内容。
+
+### 使用方法
+
+网格布局有两种类型：
+
+1. 卡片网格(card grids)：将每个元素包装成悬停时会浮动的卡片。
+2. 通用网格(generic grids)：可以将任意块元素排列成矩形形状。
+
+#### 卡片网格
+
+卡片网格可以为每个网格项提供悬停时的精美卡片。其语法有两种：列表(list)语法、块(block)语法，分别支持不同的使用场景。
+
+##### 列表语法
+
+列表语法是卡片网格的一种快捷语法，它由带有 `grid` 和 `cards` 类的 `<div>` 包裹的无序（或有序）列表组成。例如下面的示例。
+
+``` markdown title="列表卡片示例"
+<div class="grid cards" markdown>
+
+- :fontawesome-brands-html5: __HTML__ 用于文章内容和结构的构建
+- :fontawesome-brands-js: __JavaScript__ 用于实现网页交互
+- :fontawesome-brands-css3: __CSS__ 可以避免文字溢出容器
+- :fontawesome-brands-internet-explorer: __Internet Explorer__ ... 您哪位?
+
+</div>
+```
+
+<div class="grid cards" markdown>
+
+- :fontawesome-brands-html5: __HTML__ 用于文章内容和结构的构建
+- :fontawesome-brands-js: __JavaScript__ 用于实现网页交互
+- :fontawesome-brands-css3: __CSS__ 可以避免文字溢出容器
+- :fontawesome-brands-internet-explorer: __Internet Explorer__ ... 您哪位?
+
+</div>
+
+列表语法支持任意种类的Markdown语法，只需确保外层 `<div>` 定义了 markdown 属性即可。以下是一个较为复杂的示例(来自官方文档)，包含了图标的设置和超链接等。
+
+``` markdown title="更复杂的列表卡片示例"
+- :material-clock-fast:{ .lg .middle } __光速安装！__
+
+    ---
+
+    通过 [`pip`](https://squidfunk.github.io/mkdocs-material/getting-started/#with-pip) 安装 [`mkdocs-material`](https://pypistats.org/packages/mkdocs-material)，一分钟都不需要！
+
+    [:octicons-arrow-right-24: Getting started](https://squidfunk.github.io/mkdocs-material/getting-started/)
+
+- :fontawesome-brands-markdown:{ .lg .middle } __区区 Markdown 而已__
+
+    ---
+
+    你只需要专注于内容，生成响应式、可搜索的静态网页就交给我们吧！
+
+    [:octicons-arrow-right-24: Reference](https://squidfunk.github.io/mkdocs-material/reference/)
+
+- :material-format-font:{ .lg .middle } __为你量身打造！__
+
+    ---
+
+    换颜色、换字体、换语言、换图标、换logo、诸如此类，仅需短短几行就能实现。
+
+    [:octicons-arrow-right-24: Customization](https://squidfunk.github.io/mkdocs-material/customization/)
+
+- :material-scale-balance:{ .lg .middle } __基于 MIT 协议开源__
+
+    ---
+
+    Material for MkDocs 基于 MIT 协议开源，你可以在 [GitHub](https://github.com/squidfunk/mkdocs-material) 上自由访问此项目。
+
+    [:octicons-arrow-right-24: License](https://squidfunk.github.io/mkdocs-material/license/)
+
+</div>
+```
+
+<div class="grid cards" markdown>
+
+- :material-clock-fast:{ .lg .middle } __光速安装！__
+
+    ---
+
+    通过 [`pip`](https://squidfunk.github.io/mkdocs-material/getting-started/#with-pip) 安装 [`mkdocs-material`](https://pypistats.org/packages/mkdocs-material)，一分钟都不需要！
+
+    [:octicons-arrow-right-24: Getting started](https://squidfunk.github.io/mkdocs-material/getting-started/)
+
+- :fontawesome-brands-markdown:{ .lg .middle } __区区 Markdown 而已__
+
+    ---
+
+    你只需要专注于内容，生成响应式、可搜索的静态网页就交给我们吧！
+
+    [:octicons-arrow-right-24: Reference](https://squidfunk.github.io/mkdocs-material/reference/)
+
+- :material-format-font:{ .lg .middle } __为你量身打造！__
+
+    ---
+
+    换颜色、换字体、换语言、换图标、换logo、诸如此类，仅需短短几行就能实现。
+
+    [:octicons-arrow-right-24: Customization](https://squidfunk.github.io/mkdocs-material/customization/)
+
+- :material-scale-balance:{ .lg .middle } __基于 MIT 协议开源__
+
+    ---
+
+    Material for MkDocs 基于 MIT 协议开源，你可以在 [GitHub](https://github.com/squidfunk/mkdocs-material) 上自由访问此项目。
+
+    [:octicons-arrow-right-24: License](https://squidfunk.github.io/mkdocs-material/license/)
+
+</div>
+
+当屏幕空间不足时（例如在移动设备上），网格项会拉伸到视口的全宽；在有相当足够的空间时，比例如当设置了隐藏两侧边栏时，网格则可以显示 3 项或更多内容。
+
+##### 块语法
+
+块语法允许卡片与其他任意元素结合排列。只需将 `card` 类添加到网格中的任意块元素上即可。
+
+``` markdown title="块级卡片示例"
+<div class="grid" markdown>
+
+:fontawesome-brands-html5: __HTML__ 用于文章内容和结构的构建
+{ .card }
+:fontawesome-brands-js: __JavaScript__ 用于实现网页交互
+{ .card }
+:fontawesome-brands-css3: __CSS__ 可以避免文字溢出容器
+{ .card }
+> :fontawesome-brands-internet-explorer: __Internet Explorer__ ... 您哪位?
+
+</div>
+```
+
+<div class="grid" markdown>
+
+:fontawesome-brands-html5: __HTML__ 用于文章内容和结构的构建
+{ .card }
+:fontawesome-brands-js: __JavaScript__ 用于实现网页交互
+{ .card }
+:fontawesome-brands-css3: __CSS__ 可以避免文字溢出容器
+{ .card }
+> :fontawesome-brands-internet-explorer: __Internet Explorer__ ... 您哪位?
+
+</div>
+
+这种语法虽然初看略显繁琐，但可以自由混合卡片和其他元素，并且能自动适应网格布局。
+
+#### 通用网格
+
+通用网格允许将任意块元素，例如警示块(admonitions)、代码块(code blocks)、内容选项卡(content tabs)等排列成网格。只需用带有 `grid` 类的 `<div>` 标签包裹一组块元素即可。下面是一个简单的示例。
+
+``` markdown title="通用网格示例"
+<div class="grid" markdown>
+
+=== "无序列表"
+
+    * 长太息以掩涕兮，哀民生之多艰。
+    * 余虽好修姱以鞿羁兮，謇朝谇而夕替。
+    * 既替余以蕙纕兮，又申之以揽茝。
+
+=== "有序列表"
+
+    1. 既替余以蕙纕兮，又申之以揽茝。
+    2. 亦余心之所善兮，虽九死其犹未悔。
+    3. 怨灵修之浩荡兮，终不察夫民心。
+
+``` title="选项卡代码块"
+=== "无序列表"
+
+    * 众女嫉余之蛾眉兮，谣诼谓余以善淫。
+    * 固时俗之工巧兮，偭规矩而改错。
+    * 背绳墨以追曲兮，竞周容以为度。
+
+=== "有序列表"
+
+    1. 忳郁邑余侘傺兮，吾独穷困乎此时也。
+    2. 宁溘死以流亡兮，余不忍为此态也。
+    3. 鸷鸟之不群兮，自前世而固然。
+```
+
+</div>
+```
+上面的内容会被渲染为如下样式。
+
+<div class="grid" markdown>
+
+=== "无序列表"
+
+    * 长太息以掩涕兮，哀民生之多艰。
+    * 余虽好修姱以鞿羁兮，謇朝谇而夕替。
+    * 既替余以蕙纕兮，又申之以揽茝。
+
+=== "有序列表"
+
+    1. 既替余以蕙纕兮，又申之以揽茝。
+    2. 亦余心之所善兮，虽九死其犹未悔。
+    3. 怨灵修之浩荡兮，终不察夫民心。
+
+``` title="选项卡代码块"
+=== "无序列表"
+
+    * 众女嫉余之蛾眉兮，谣诼谓余以善淫。
+    * 固时俗之工巧兮，偭规矩而改错。
+    * 背绳墨以追曲兮，竞周容以为度。
+
+=== "有序列表"
+
+    1. 忳郁邑余侘傺兮，吾独穷困乎此时也。
+    2. 宁溘死以流亡兮，余不忍为此态也。
+    3. 鸷鸟之不群兮，自前世而固然。
+```
+
+</div>
+
+## Icons and Emojis 图标和表情
+
+Material for MkDocs 的一大亮点是几乎无需额外的设置便可在项目文档中使用超过 10,000 个图标和数千种表情。此外，你还可以在 `mkdocs.yml`、自己的文档和模板中添加并使用自定义图标。
+
+### 在库内搜索图标和表情
+
+你可以使用 [material for mkdocs 的官方搜索功能](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search)来搜索并复制(相对路径)你想使用的表情或图标。仅支持英文搜索。
+目前，Material for MkDocs 内置了以下四种图标集，上方的搜索功能也只能在这四个部分里寻找图标。
+
+- :material-material-design: – [Material Design]
+- :fontawesome-brands-font-awesome: – [FontAwesome]
+- :octicons-mark-github-16: – [Octicons]
+- :simple-simpleicons: – [Simple Icons]
+
+### 使用方法
+
+#### Emojis
+
+在 Markdown 中使用 emoji 时，将表情符号的短代码放在两个冒号之间即可使用。如果使用(官方推荐)的 Twemoji 表情，则可以在 [Emojipedia](https://emojipedia.org/twitter/) 中查找短代码。
+
+``` title="smile emoji"
+:smile:
+```
+
+<!-- TODO:看看这个markdown有没有什么区别，如果有区别记得扩展到整个文档 -->
+
+<div markdown>
+
+:smile:
+
+</div>
+
+#### Icons
+
+在`mkdocs.yml`中配置后，icons也可以像emoji一样使用，通过引用主题自带图标的有效相对路径(位于 `.icons` 目录下)，并将路径中的 `/` 替换为 `-`。
+
+``` title="face laugh wink icon"
+:fontawesome-regular-face-laugh-wink:
+```
+
+<div  markdown>
+
+:fontawesome-regular-face-laugh-wink:
+
+</div>
+
+##### 添加颜色
+
+启用 Attribute Lists 后，可以通过特殊语法为图标添加自定义 CSS 类。参考[with color](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#with-colors).
+
+##### 添加动效
+
+与上一部分类似，你也可以通过自行定义 CSS 来实现图标的动效。参考[with animations](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#with-animations).
+
+#### 侧边栏的Emojis和Icons
+
+借助内置的 typeset 插件，可以在标题中使用图标和表情符号，这些内容同样会在侧边栏中渲染，插件也会保留 Markdown 和 HTML 的格式。
+然而这个插件仅限 Insiders 版本使用。
+
+### 自定义样式
+
+#### 在模板中使用图标
+
+进行主题扩展、使用模板时才会用得上，详见[Using icons in templates](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#using-icons-in-templates).
+
+## Images 图片
+
+虽然图片是 Markdown 的核心语法之一，但其在实际的使用中可能并不方便。Material for MkDocs 提供了更加舒适的图片处理体验，包括图片对齐样式和图片标题支持的功能。
+
+### 配置项
+
+#### 图片灯箱(?)
+
+<!-- 本网站未配置 -->
+如果您想为文档添加图片缩放功能，可以使用与 Material for MkDocs 完美集成的 `glightbox` 插件。通过 pip 安装：
+
+``` bash
+pip install mkdocs-glightbox
+```
+
+然后在 `mkdocs.yml` 中添加以下配置：
+
+``` yaml
+plugins:
+  - glightbox
+```
+
+建议查看插件的[配置选项](https://github.com/blueswen/mkdocs-glightbox#usage)以获得最佳效果。
+
+### 使用方法
+
+#### 图片对齐
+
+启用 Attribute Lists 后，可以通过添加 align 属性（如 align=left 或 align=right）来对齐图片。
+
+<!-- 检查图片的相对路径如何设置 -->
+=== "左对齐"
+
+    ``` markdown title="图片左对齐"
+    ![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–){ align=left }
+    ```
+
+    <div markdown>
+
+    ![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–){ align=left width=300 }
+
+    国破山河在，城春草木深。
+    感时花溅泪，恨别鸟惊心。
+    烽火连三月，家书抵万金。
+    白头搔更短，浑欲不胜簪。
+
+    </div>
+
+=== "右对齐"
+
+    ``` markdown title="图片右对齐"
+    ![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–){ align=right }
+    ```
+
+    <div markdown>
+
+    ![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–){ align=right width=300 }
+
+    风急天高猿啸哀，渚清沙白鸟飞回。
+    无边落木萧萧下，不尽长江滚滚来。
+    万里悲秋常作客，百年多病独登台。
+    艰难苦恨繁霜鬓，潦倒新停浊酒杯。
+
+    </div>
+
+=== "居中对齐?"
+
+    为什么没有居中对齐？  
+    `align` 属性不支持居中对齐，因此 Material for MkDocs 不支持此选项。你可以改用图片标题/说明语法，但加不加标题都是可以的。
+
+如果屏幕宽度不足以在图片旁边显示文本（例如在移动设备上），图片会自动拉伸至视口的全宽。(?)
+
+#### 图片标题/说明
+
+Markdown 语法本身并不支持给图片添加标题，但我们可以借助 HTML 的 `<figure>` 和 `<figcaption>` 标签来实现标题功能。如下所示。
+
+``` markdown title="带标题的图片"
+<figure markdown="span">
+  ![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–){ width="300" }
+  <figcaption>Image caption</figcaption>
+</figure>
+```
+
+<figure markdown="span">
+  ![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–){ width="300" }
+  <figcaption>Image caption</figcaption>
+</figure>
+
+##### 更简单的方式
+
+使用 Caption 插件，你可以为任何 Markdown 块元素(包括图片)添加标题。
+
+``` markdown title="带标题的图片"
+![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–){ width="300" }
+/// caption
+这里是标题喵喵喵
+///
+```
+
+![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–){ width="300" }
+/// caption
+这里是标题喵喵喵
+///
+
+#### 图片延时加载
+
+现代浏览器支持通过 loading=lazy 指令对图片进行延迟加载。在不支持该功能的浏览器中，该功能则会自动降级为正常加载。(?)
+
+``` markdown tite="手动设置图片延时加载"
+![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–){ loading=lazy }
+```
+
+![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–){ loading=lazy }
+
+#### 亮暗模式图片切换
+
+如果您启用了颜色模式切换功能，那么就可以分别为亮色模式和暗色模式分别设置不同的图片，只需在图片的 URL 中添加 `#only-light` 或 `#only-dark` 的哈希标记即可。
+
+``` markdown title="为亮暗模式分别使用不同的图片"
+![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa&text=-+Image+-#only-light)
+![Image title](https://dummyimage.com/600x400/21222c/d5d7e2&text=-+Image+-#onlydark)
+```
+
+![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa&text=-+Image+-#only-light)
+![Image title](https://dummyimage.com/600x400/21222c/d5d7e2&text=-+Image+-#onlydark)
+
+> 如果你自定义了颜色方案，请参看[Custom light scheme](https://squidfunk.github.io/mkdocs-material/reference/images/#light-and-dark-mode-custom-light-scheme)和[Custom dark scheme](https://squidfunk.github.io/mkdocs-material/reference/images/#light-and-dark-mode-custom-dark-scheme).
+
+## Lists 列表

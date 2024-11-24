@@ -152,14 +152,17 @@ markdown_extensions: # 这部分直接抄的官方文档
   - def_list
   - footnotes
   - md_in_html
+  - tables
   - toc:
       permalink: true
   # Python Markdown Extensions
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.blocks.caption
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
+  - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji: # 忽略报错
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -187,4 +190,3 @@ markdown_extensions: # 这部分直接抄的官方文档
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-  - tables
