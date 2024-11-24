@@ -61,7 +61,7 @@ theme:
     - navifation.tracking # 锚点跟踪
     - navigation.tabs # 宽度适合时在上方显示导航栏
     #- navigation.tabs.sticky # 导航栏常驻
-    - navigation.sections # 左侧导航标签分组
+    #- navigation.sections # 左侧导航标签分组
     #- navigation.expand # 左侧导航栏自动展开
     #- navigation.path # Insiders Only, 在上方显示当前导航所在目录
     - navigation.prune # 导航精简，减少构建网页时的消耗

@@ -3,20 +3,21 @@ hide:
   - footer
 ---
 
-# Welcome to MkDocs
+# 欢迎
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+欢迎你来到鲤鱼的小站！
 
-## Commands
+## 这个网站是怎么构建的？
 
-- `mkdocs new [dir-name]` - Create a new project.
-- `mkdocs serve` - Start the live-reloading docs server.
-- `mkdocs build` - Build the documentation site.
-- `mkdocs -h` - Print help message and exit.
+本网站基于 [Material for mkdocs](https://squidfunk.github.io/mkdocs-material/) 构建，并托管在 [Github Pages](https://pages.github.com/) 上。
 
-## Project layout
+## 这个网站是用来做什么的？
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+心血来潮从网上找教程、翻谷歌、看官方文档，一气呵成，赶制了一份非常潦草的适用于 Material for mkdocs 的 [markdown 书写教程]。
+后面可能会根据计划的目标把自己跟着做项目、代码作业之类的乱七八糟的东西陆陆续续往上面搬，还可能会把自己整理的一些资料之类的东西发在上面，就当是做备份了。
+
+[markdown 书写教程]: ./language/markdown/index.md
+
+## 网站作者现在是干什么的？
+
+大二上，系学生，在摆烂。
