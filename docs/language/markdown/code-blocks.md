@@ -33,8 +33,8 @@ int main()
 int main()
 {
     std::cout<<"Hello world!";
-    return 0; // (1)!
-}   // (2)
+    return 0; // (1)
+}   // (2)!
 ```
 
 1. 注解必须放在注释语句内，而插入代码中的注解是 Insiders 特有的功能。
