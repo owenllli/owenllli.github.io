@@ -15,9 +15,6 @@
         <link rel="next" href="../annotations/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../feed_rss_updated.xml">
-      
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
@@ -635,34 +632,10 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="内联块">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      右部内联块
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      左部内联块
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       支持类型
     </span>
@@ -671,7 +644,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       自定义设置
     </span>
@@ -681,7 +654,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       恢复到旧版本
     </span>
@@ -690,9 +663,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
-      自定义警示块
+      自定义样式
     </span>
   </a>
   
@@ -1014,6 +987,49 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../candcpp/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    C/C++
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1145,34 +1161,10 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="内联块">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      右部内联块
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      左部内联块
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       支持类型
     </span>
@@ -1181,7 +1173,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       自定义设置
     </span>
@@ -1191,7 +1183,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       恢复到旧版本
     </span>
@@ -1200,9 +1192,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
-      自定义警示块
+      自定义样式
     </span>
   </a>
   
@@ -1229,137 +1221,176 @@
 
 
 <h1 id="admonitions">Admonitions 警示块<a class="headerlink" href="#admonitions" title="Permanent link">&para;</a></h1>
+<p>警示框，又称提示框，是一种非常适合在不中断文档流的情况下包含附加内容的工具。Material for MkDocs 提供了多种类型的警示框，并允许在其中嵌套任意内容。</p>
 <h2 id="_1">使用方法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>警示框使用简单的语法：块以 <code>!!!</code> 开始，后跟一个作为类型限定符的关键字。块内容紧接在下一行，并缩进四个空格。</p>
 <div class="language-Markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>!!! note
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    这是没有设置标题的 note 类型警示块
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    这是没有设置标题的 note 类型警示块。
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>这是没有设置标题的 note 类型警示块</p>
+<p>这是没有设置标题的 <code>note</code> 类型警示块。</p>
 </div>
 <h2 id="_2">修改标题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="language-Markdown highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!!! note &quot;这里是[标题](#Admonitions-警示块)&quot;
+<p>在默认情况下，标题会显示为警示框的类型。但你可以通过在类型限定符后添加带引号的字符串来修改标题(支持有效的 Markdown 语法，包括链接、格式化等)。</p>
+<div class="language-Markdown highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!!! note &quot;这里是[标题](#)&quot;
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    这是设置了标题的 note 类型警示块，你可以在标题里任意发挥创意，例如加一个超链接，等等
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    这是设置了标题的 note 类型警示块，
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    你可以在标题里任意发挥，例如加一个超链接等。
 </span></code></pre></div>
 <div class="admonition note">
-<p class="admonition-title">这里是<a href="#Admonitions-警示块">标题</a></p>
-<p>这是设置了标题的 note 类型警示块，你可以在标题里任意发挥创意，例如加一个超链接，等等</p>
+<p class="admonition-title">这里是<a href="./#_2">标题</a></p>
+<p>这是设置了标题的 <code>note</code> 类型警示块，
+你可以在标题里任意发挥，例如加一个超链接等。</p>
 </div>
 <h2 id="_3">删除标题<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>与<a href="./#_2">修改标题</a>类似，你还可以完全省略警示块的标题和图标。只需要在类型限定符后添加一个空字符串即可。请注意，这种方法不适用于后面提到的<a href="./#_4">可折叠警示块</a>。</p>
 <div class="language-Markdown highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>!!! note &quot;&quot;
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    与修改标题类似，可以通过在类型限定符后添加空字符串完全省略图标和标题。但请注意，这在折叠块中无效
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    与修改标题类似，可以通过在类型限定符后
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    添加空字符串完全省略图标和标题。但请注意，这在折叠块中无效。
 </span></code></pre></div>
 <div class="admonition note">
-<p>与修改标题类似，可以通过在类型限定符后添加空字符串完全省略图标和标题。但请注意，这在折叠块中是无效的</p>
+<p>与修改标题类似，可以通过在类型限定符后
+添加空字符串完全省略图标和标题。但请注意，这在折叠块中是无效的。</p>
 </div>
 <h2 id="_4">可折叠块<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>启用 <code>Details</code> 扩展后，若警示框块以 <code>???</code> 代替 <code>!!!</code>，则警示框会被渲染为一个可折叠的块，同时右侧带有一个小型切换按钮，用于切换折叠状态。</p>
 <div class="language-Markdown highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>??? note
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    启用 Details 扩展后，将警示块的起始标记从 !!! 更改为 ???，即可将其渲染为一个可折叠块，并在块的右侧显示一个小型折叠切换按钮
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    启用 Details 扩展后，将警示块的起始标记从 !!! 更改为 ???，
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    即可将其渲染为一个可折叠块，并在块的右侧显示一个小型折叠切换按钮。
 </span></code></pre></div>
 <details class="note">
 <summary>Note</summary>
-<p>启用 Details 扩展后，将警示块的起始标记从 !!! 更改为 ???，即可将其渲染为一个可折叠块，并在块的右侧显示一个小型折叠切换按钮</p>
+<p>启用 <code>Details</code> 扩展后，将警示块的起始标记
+从 <code>!!!</code> 更改为 <code>???</code>，即可将其渲染为一个可折叠块，
+并在块的右侧显示一个小型折叠切换按钮。</p>
 </details>
 <h3 id="_5">自动展开<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>在 <code>???</code> 后面加一个 <code>+</code> 即可将折叠块默认设置为展开状态。</p>
 <div class="language-Markdown highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>???+ note
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    在 ??? 后面加一个 + 即可将折叠块默认设置为展开状态
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    在 ??? 后面加一个 + 即可将折叠块默认设置为展开状态。
 </span></code></pre></div>
 <details class="note" open="open">
 <summary>Note</summary>
-<p>在 ??? 后面加一个 + 即可将折叠块默认设置为展开状态</p>
+<p>在 <code>???</code> 后面加一个 <code>+</code> 即可将折叠块默认设置为展开状态。</p>
 </details>
 <h2 id="_6">内联块<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<h3 id="_7">右部内联块<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>警示框也可以渲染为行内块(你可以将其用于侧边栏等场合)。通过使用 <code>inline</code> 和 <code>end</code> 修饰符，可以将警示框分别渲染在其他元素的左侧或右侧。
+<strong>重要提示</strong>: 使用 <code>inline</code> 修饰符的警示框必须在想要放置其旁边的内容块之前声明。如果空间不足，比如在移动端查看网页，警示框将被强制拉伸至视窗的完整宽度。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="右部内联块" name="__tabbed_1" type="radio" /><input id="左部内联块" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="右部内联块"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06"/></svg></span> 右部内联块</label><label for="左部内联块"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M7.78 12.53a.75.75 0 0 1-1.06 0L2.47 8.28a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L4.81 7h7.44a.75.75 0 0 1 0 1.5H4.81l2.97 2.97a.75.75 0 0 1 0 1.06"/></svg></span> 左部内联块</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="admonition info inline end">
 <p class="admonition-title">右侧内联块</p>
-<p>这是一个通过 inline end 修饰的内联块，因此该块会被渲染到文字右侧，这可以用于侧边栏显示信息</p>
+<p>这是一个通过 <code>inline end</code> 修饰的内联块，
+因此该块会被渲染到文字右侧，这可以用于在侧边栏显示信息。</p>
 </div>
-<div class="language-Markdown highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>!!! info inline end &quot;标题&quot;
+<div class="language-Markdown highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>!!! info inline end &quot;右侧内联块&quot;
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    这是一个通过 inline end 修饰的内联块，因此该块会被渲染到文字右侧，这可以用于侧边栏显示信息
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    这是一个通过 inline end 修饰的内联块，
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    因此该块会被渲染到文字右侧，
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    这可以用于在侧边栏显示信息。
 </span></code></pre></div>
-<h3 id="_8">左部内联块<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<div class="admonition info inline end">
-<p class="admonition-title">左侧内联块</p>
-<p>这是一个只通过 inline 修饰的内联块，因此该块会被渲染到文字左侧，这同样可以用于侧边栏显示信息。另外，使用 inline 修饰符的警告框必须声明在你希望其旁边显示的内容块之前。如果没有足够的空间在目标内容块旁渲染警告框，例如在移动设备视口中，警告框将会自动扩展到视口的全宽度。</p>
 </div>
-<div class="language-Markdown highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>!!! info inline end &quot;左侧内联块&quot;
+<div class="tabbed-block">
+<div class="admonition info inline">
+<p class="admonition-title">左侧内联块</p>
+<p>这是一个只通过 <code>inline</code> 修饰的内联块，
+因此该块会被渲染到文字左侧，这同样可以用于在侧边栏显示信息。</p>
+</div>
+<div class="language-Markdown highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>!!! info inline &quot;左侧内联块&quot;
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    这是一个只通过 inline 修饰的内联块，因此该块会被渲染到文字左侧，这同样可以用于侧边栏显示信息
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    这是一个只通过 inline 修饰的内联块，
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    因此该块会被渲染到文字左侧，
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    这同样可以用于在侧边栏显示信息。
 </span></code></pre></div>
-<h2 id="_9">支持类型<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
-<p>以下是 Material for MkDocs 支持的类型限定符，默认类型设置为 note:
-<code>note</code></p>
+</div>
+</div>
+</div>
+<h2 id="_7">支持类型<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>以下是 Material for MkDocs 支持的类型限定符，默认类型设置为 note:</p>
+<p><code>note</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>这是一个 note 类型的警示块</p>
+<p>这是一个 <code>note</code> 类型的警示块。<br>
+圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。—— 韩愈《师说》</p>
 </div>
 <p><code>abstract</code></p>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>这是一个 abstract 类型的警示块</p>
+<p>这是一个 <code>abstract</code> 类型的警示块。<br>
+圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。—— 韩愈《师说》</p>
 </div>
 <p><code>info</code></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>这是一个 info 类型的警示块</p>
+<p>这是一个 <code>info</code> 类型的警示块。<br>
+圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。—— 韩愈《师说》</p>
 </div>
 <p><code>tip</code></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>这是一个 tip 类型的警示块</p>
+<p>这是一个 <code>tip</code> 类型的警示块。<br>
+圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。—— 韩愈《师说》</p>
 </div>
 <p><code>success</code></p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<p>这是一个 success 类型的警示块</p>
+<p>这是一个 <code>success</code> 类型的警示块。<br>
+圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。—— 韩愈《师说》</p>
 </div>
 <p><code>question</code></p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p>这是一个 question 类型的警示块</p>
+<p>这是一个 <code>question</code> 类型的警示块。<br>
+圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。—— 韩愈《师说》</p>
 </div>
 <p><code>warning</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>这是一个 warning 类型的警示块</p>
+<p>这是一个 <code>warning</code> 类型的警示块。<br>
+圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。—— 韩愈《师说》</p>
 </div>
 <p><code>failure</code></p>
 <div class="admonition failure">
 <p class="admonition-title">Failure</p>
-<p>这是一个 failure 类型的警示块</p>
+<p>这是一个 <code>failure</code> 类型的警示块。<br>
+圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。—— 韩愈《师说》</p>
 </div>
 <p><code>danger</code></p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>这是一个 danger 类型的警示块</p>
+<p>这是一个 <code>danger</code> 类型的警示块。<br>
+圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。—— 韩愈《师说》</p>
 </div>
 <p><code>bug</code></p>
 <div class="admonition bug">
 <p class="admonition-title">Bug</p>
-<p>这是一个 bug 类型的警示块</p>
+<p>这是一个 <code>bug</code> 类型的警示块。<br>
+圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。—— 韩愈《师说》</p>
 </div>
 <p><code>example</code></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>这是一个 example 类型的警示块</p>
+<p>这是一个 <code>example</code> 类型的警示块。<br>
+圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。—— 韩愈《师说》</p>
 </div>
 <p><code>quote</code></p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
-<p>这是一个 quote 类型的警示块</p>
+<p>这是一个 <code>quote</code> 类型的警示块。<br>
+圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。—— 韩愈《师说》</p>
 </div>
-<h2 id="_10">自定义设置<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<h3 id="_11">恢复到旧版本<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<p>在版本 8.5.6 之前，警示块的外观与现在的外观略有区别。具体对比可以看下图。
-(TODO:塞一张对比图)
-如果你想恢复到旧版的外观，可以将以下的 CSS 添加到一个额外的样式表中，并在 mkdocs.yml 中引用它即可。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="docsstylesheetsxxxcss" name="__tabbed_1" type="radio" /><input id="mkdocsyml" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="docsstylesheetsxxxcss"><code>docs/stylesheets/xxx.css</code></label><label for="mkdocsyml"><code>mkdocs.yml</code></label></div>
+<h2 id="_8">自定义设置<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="_9">恢复到旧版本<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>在 <code>8.5.6</code> 版本之前，警示块的外观与现在的外观略有区别。具体对比可以看下图。</p>
+<!-- TODO: 塞一张对比图 -->
+<p>如果你想恢复到旧版的外观，可以将以下的 CSS 添加到一个额外的样式表中，并在 <code>mkdocs.yml</code> 中引用它即可。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="docsstylesheetsxxxcss" name="__tabbed_2" type="radio" /><input id="mkdocsyml" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="docsstylesheetsxxxcss"><code>docs/stylesheets/xxx.css</code></label><label for="mkdocsyml"><code>mkdocs.yml</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-css highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="nc">md-typeset</span><span class="w"> </span><span class="p">.</span><span class="nc">admonition</span><span class="o">,</span>
@@ -1376,7 +1407,7 @@
 </div>
 </div>
 </div>
-<h3 id="_12">自定义警示块<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h3 id="_10">自定义样式<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>参见 <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/#custom-admonitions">Custom admonitions</a>.</p>
 
 
@@ -1400,7 +1431,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年11月24日 15:48:14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年1月18日 17:29:19</span>
   </span>
 
     
@@ -1528,7 +1559,7 @@ Code licensed under the <a href="https://opensource.org/license/MIT target="_bla
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navifation.instant", "navifation.instant.progress", "navifation.tracking", "navigation.tabs", "navigation.prune", "toc.follow", "navigation.top", "search.suggest", "search.share", "header.autohide", "navigation.footer", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navifation.instant", "navifation.instant.progress", "navifation.tracking", "navigation.tabs", "navigation.prune", "toc.follow", "navigation.top", "search.suggest", "search.share", "header.autohide", "navigation.footer", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>

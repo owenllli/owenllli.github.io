@@ -1,0 +1,1469 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../../tags/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>上机备份 - 鲤鱼的小站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/transition-light-dark.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/footer-light.css">
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="鲤鱼的小站" class="md-header__button md-logo" aria-label="鲤鱼的小站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            鲤鱼的小站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              上机备份
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="green"  aria-label="切换到夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="切换到日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  欢迎
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  语言
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tags/" class="md-tabs__link">
+        
+  
+    
+  
+  标签页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  归档
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="鲤鱼的小站" class="md-nav__button md-logo" aria-label="鲤鱼的小站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    鲤鱼的小站
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    欢迎
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../blog/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    博客
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    语言
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../markdown/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Markdown 基本语法
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    C/C++
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            C/C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    上机备份
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    上机备份
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      大一秋季学期（C 语言）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="大一秋季学期（C 语言）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      第五次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      第六次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      第七次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      第八次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      第九次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      第十次上机
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    标签页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    归档
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      大一秋季学期（C 语言）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="大一秋季学期（C 语言）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      第五次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      第六次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      第七次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      第八次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      第九次上机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      第十次上机
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">上机作业代码备份<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>本文档为大连理工大学软件工程学院（软件工程系）2023 级的 “程序设计基础”“数据结构与算法” 等课程中的 C/C++ 的相关上机代码备份。</p>
+<p>鉴于 Academic Integrity 的守则，代码不会公开，仅备份在私有库内，当前页面仅记录这些作业的内容（可能包含输入及输出样例）。</p>
+<h2 id="c">大一秋季学期（C 语言）<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
+<h3 id="_2">第一次上机<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>写一个 "Hello World" 程序。</p>
+<h3 id="_3">第二次上机<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="1-大小写转化" name="__tabbed_1" type="radio" /><input id="2-单位数转化" name="__tabbed_1" type="radio" /><input id="3-字符串加密" name="__tabbed_1" type="radio" /><input id="4-字符串加密" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="1-大小写转化">1. 大小写转化</label><label for="2-单位数转化">2. 单位数转化</label><label for="3-字符串加密">3. 字符串加密</label><label for="4-字符串加密">4. 字符串加密</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>从键盘输入一个字符，如果是大写英文字母，则输出其小写形式；如果是小写英文字母，输出其大写形式；否则输出 <code>输入错误</code>。注意输出必要的提示信息，另外尝试做输入有效性验证，比如输入错误时可以允许继续输入。输入有效性验证涉及到循环，不做硬性要求。</p>
+</div>
+<div class="tabbed-block">
+<p>在美国体积测量系统中，1<code>pint</code> 是 2<code>cups</code>，1<code>cup</code> 是 8<code>ounces</code>，1<code>ounce</code> 是 2<code>tablespoons</code>，1<code>tablespoon</code> 是 3<code>teaspoons</code>。编写一个程序，输入 <code>cup</code> 数，求出对应的 <code>pint</code>、<code>ounce</code>、<code>tablespoon</code> 和 <code>teaspoon</code> 数。</p>
+</div>
+<div class="tabbed-block">
+<p>设计一个简单的字符串加密算法，不限于如下两种算法：将字符串译成密码，密码规律是用原来的字母后面的第四个字母代替原来的字符，例如，字母 <code>A</code> 后面 4 个字母是 <code>E</code>，用 <code>E</code> 代替 <code>A</code>；字母 <code>x</code> 经转换后变为 <code>b</code>，因此 <code>China</code> 应译为 <code>Glmre</code>，编写一个程序，输入一个长度不超过 10 个字符串，输出经过加密运算后的密码。</p>
+</div>
+<div class="tabbed-block">
+<p>间谍机器人能够进行加密解密工作，目前采用的加密技术是将 a-z 个字母中的前 10 个字母 a-j 用 0-9 这十个数替换，后面的 16 个字母 k,l,…y,z 分别用 l,m,…z,k 替换，请输入一个字符，输出加密后应该是哪个字符。</p>
+</div>
+</div>
+</div>
+<h3 id="_4">第三次上机<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="1-判断三角" name="__tabbed_2" type="radio" /><input id="2-冰箱温度" name="__tabbed_2" type="radio" /><input id="3-逆序整数" name="__tabbed_2" type="radio" /><input id="4-航班时间" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="1-判断三角">1. 判断三角</label><label for="2-冰箱温度">2. 冰箱温度</label><label for="3-逆序整数">3. 逆序整数</label><label for="4-航班时间">4. 航班时间</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>输入三角形的三个边长，计算最大角的正弦值及三角形面积和三角形种类（直角、钝角、锐角）。注意对三角形边长合理性的判断。</p>
+</div>
+<div class="tabbed-block">
+<p>编写程序预测断电后冰箱的温度。断电后经过一段时间，温度保持情况由如下公式决定：<span class="arithmatex">\(T=\frac {4t^{2}}{t+2}-20\)</span> .</p>
+<p>其中，t 为断电后经过的时间（小时），T 为温度（℃）。经过若干小时候冰箱温度接近室温并保持不变。假设室温为 18℃. 程序提示用户输入时间，它以整数小时和分钟表示，需要将其转换为浮点型的小时数。输出此时的温度值（小数点后 2 位有效数字）。</p>
+</div>
+<div class="tabbed-block">
+<p>输入一个 5 位整数，求出将其每一位逆序之后的整数，并输出，例如：</p>
+<p>输入 12345，输出 54321；输入 100，输出 1；输入 330，输出 33。</p>
+</div>
+<div class="tabbed-block">
+<p>设计程序计算航班的飞行时间，输入 24 小时制的起飞和降落时间，输出飞行时间，例如：
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>起飞时间：8:30
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>降落时间：10:15
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>飞行时间：1:45
+</span></code></pre></div>
+（假设：起降时间在同一天或相邻的两天）</p>
+</div>
+</div>
+</div>
+<h3 id="_5">第四次上机<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:6"><input checked="checked" id="1-体型判断" name="__tabbed_3" type="radio" /><input id="2-成绩转换" name="__tabbed_3" type="radio" /><input id="3-日期计算" name="__tabbed_3" type="radio" /><input id="4-四则运算" name="__tabbed_3" type="radio" /><input id="5-快递费用" name="__tabbed_3" type="radio" /><input id="6-猜数游戏" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="1-体型判断">1. 体型判断</label><label for="2-成绩转换">2. 成绩转换</label><label for="3-日期计算">3. 日期计算</label><label for="4-四则运算">4. 四则运算</label><label for="5-快递费用">5. 快递费用</label><label for="6-猜数游戏">6. 猜数游戏</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>判断某人是否属于肥胖体型，按照如下的” 体指数” 对肥胖程度划分：体指数 t = 体重 /((身高)*(身高))(单位:kg,m).</p>
+<p>当 t&lt;18 时：偏瘦；当 18&lt;=t&lt;=25 时：正常体重；当 25&lt;t&lt;27 时：超重体重；当 t&gt;27：肥胖。</p>
+<p>输入身高、体重，根据公式，判断出你属于何种体型。</p>
+</div>
+<div class="tabbed-block">
+<p>学生考试成绩可用百分制和等级制两种表示方式，规定成绩大于或等于 90 分时等级为 A，在 80 分到 89 分之间等级为 B，在 70 到 79 分之间时等级为 C，在 60 到 69 分之间时等级为 D，在 60 以下不及格，等级为 E。编写程序实现百分制和等级制的成绩转换。</p>
+<ol>
+<li>
+<p>输入成绩等级，输出相应百分制的分数段（用 if）；</p>
+</li>
+<li>
+<p>输入百分制的分数，输出相应成绩等级（用 switch-case）。</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>设计复杂的日期计算器。要求根据用户输入一个日期，实现如下功能：</p>
+<ol>
+<li>
+<p>判断日期是否有效；</p>
+</li>
+<li>
+<p>输出 n 天后的日期；</p>
+</li>
+<li>
+<p>计算距离该年结束还有多少天。</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>设计简单的计算器程序。要求根据用户输入的表达式进行计算，输出结果：<code>操作数 1 运算符 op 作数 2</code>.</p>
+<p>指定的运算符为 <code>+ - * /</code>. 操作数均为浮点数。</p>
+</div>
+<div class="tabbed-block">
+<p>快递费用计算：上海市的某快递公司根据投送目的地的远近，将全国划分成 5 个区域。快递费按邮件重量计算，由起重费用、续重费用两部分构成： </p>
+<ol>
+<li>
+<p>起重（首重）1 公斤按起重资费计算（不足 1 公斤，按 1 公斤计算），超过首重的重量，按公斤（不足 1 公斤，按 1 公斤计算）收取续重费； </p>
+</li>
+<li>
+<p>同城起重资费 10 元，续重 3 元 / 公斤； </p>
+</li>
+<li>
+<p>寄往 1 区（江浙两省）的邮件，起重资费 10 元，续重 4 元； </p>
+</li>
+<li>
+<p>寄往其他地区的邮件，起重资费统一为 15 元。而续重部分，不同区域价格不同：2 区的续重 5 元 / 公斤，3 区的续重 6.5 元 / 公斤，4 区的续重 10 元 / 公斤。 </p>
+</li>
+</ol>
+<p>编写程序，从键盘输入邮件的目的区域编码和重量，计算并输出运费，结果保留 2 位小数。 
+程序中所有浮点数的数据类型均为 float 。
+提示：续重部分不足一公斤，按 1 公斤计算。因此，如包裹重量 2.3 公斤：1 公斤算起重，剩余的 1.3 公斤算续重，不足 1 公斤按 1 公斤计算，1.3 公斤折合续重 为 2 公斤。重量应大于 0、区域编号不能超出 0-4 的范围。</p>
+</div>
+<div class="tabbed-block">
+<p>计算机随机产生一个整数，提示用户输入猜测的数字，可设置最多猜测次数（MAXGUESSES），程序根据用户猜测的数字给出相应提示信息（如 “猜大了”，“猜小了”，“恭喜你，猜对了！一共猜了 x 次！”，“很遗憾，已经猜了 MAXGUESSES 次，游戏失败。</p>
+</div>
+</div>
+</div>
+<h3 id="_6">第五次上机<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:8"><input checked="checked" id="1-计算圆周率" name="__tabbed_4" type="radio" /><input id="2-计算自然常数" name="__tabbed_4" type="radio" /><input id="3-求最大公约数" name="__tabbed_4" type="radio" /><input id="4-猴子吃桃问题" name="__tabbed_4" type="radio" /><input id="5-韩信点兵问题" name="__tabbed_4" type="radio" /><input id="6-分解质因子" name="__tabbed_4" type="radio" /><input id="7-求孪生素数对" name="__tabbed_4" type="radio" /><input id="8-数的处理" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="1-计算圆周率">1. 计算圆周率</label><label for="2-计算自然常数">2. 计算自然常数</label><label for="3-求最大公约数">3. 求最大公约数</label><label for="4-猴子吃桃问题">4. 猴子吃桃问题</label><label for="5-韩信点兵问题">5. 韩信点兵问题</label><label for="6-分解质因子">6. 分解质因子</label><label for="7-求孪生素数对">7. 求孪生素数对</label><label for="8-数的处理">8. 数的处理</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>利用下面公式估计 <span class="arithmatex">\(\pi\)</span> 的值。</p>
+<div class="arithmatex">\[\frac {\pi}{2} = \frac {2\times 2}{1\times 3} \times ... \times \frac {2n\times 2n}{(2n-1)\times (2n+1)}\]</div>
+</div>
+<div class="tabbed-block">
+<p>编写程序求常数 <span class="arithmatex">\(e\)</span> 的近似值，估算公式如下：</p>
+<div class="arithmatex">\[e = 1 +\frac {1}{1!} +\frac {2}{2!} +...\]</div>
+</div>
+<div class="tabbed-block">
+<p>分别用穷举法和迭代法（欧几里得算法）求两个整数的最大公约数。输入两个正整数 m 和 n，编程求它们的最大公约数。</p>
+</div>
+<div class="tabbed-block">
+<p>猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个，第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃了前一天剩下的一半零一个。到第 10 天早上想再吃时，见只剩下一个桃子了。求第一天共摘了多少。</p>
+</div>
+<div class="tabbed-block">
+<p>韩信有一队兵，按从 1 至 5 排队报数，最末一个士兵报的数为 1；按从 1 至 6 报数，最后一个士兵报的数为 5；按从 1 至 7 报数，最末一个士兵报的是 4；最后再按从 1 到 11 报数，最末一个士兵报数为 10，请问韩信至少有多少兵？</p>
+</div>
+<div class="tabbed-block">
+<p>输入一个正整数，如果该数不是素数，则将其分解质因数，输出所有的因子。例如：输入 90，打印出 90=2*3*3*5。</p>
+</div>
+<div class="tabbed-block">
+<p>相差为 2 的两个素数称为孪生素数。例如，3 与 5，41 与 43 等都是孪生素数。设计程序求出指定区间上的所有孪生素数对，区间上限和下限从键盘输入。</p>
+</div>
+<div class="tabbed-block">
+<p>输入一个非负整数，正序输出它的每一位数字，及各位数字的和。</p>
+<p>输入样例：<code>12345</code></p>
+<p>输出：<code>txt
+1 2 3 4 5
+Sum = 15</code></p>
+</div>
+</div>
+</div>
+<h3 id="_7">第六次上机<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="a-一维数组" name="__tabbed_5" type="radio" /><input id="b-二维数组" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="a-一维数组">A. 一维数组</label><label for="b-二维数组">B. 二维数组</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="6:6"><input checked="checked" id="1-不重复元素" name="__tabbed_6" type="radio" /><input id="2-筛选法求素数" name="__tabbed_6" type="radio" /><input id="3-有序合并数组" name="__tabbed_6" type="radio" /><input id="4-线性查找算法" name="__tabbed_6" type="radio" /><input id="5-二分查找算法" name="__tabbed_6" type="radio" /><input id="6-一些基础排序" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="1-不重复元素">1. 不重复元素</label><label for="2-筛选法求素数">2. 筛选法求素数</label><label for="3-有序合并数组">3. 有序合并数组</label><label for="4-线性查找算法">4. 线性查找算法</label><label for="5-二分查找算法">5. 二分查找算法</label><label for="6-一些基础排序">6. 一些基础排序</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>随机产生 N=20 个 10 以内的自然数，输出原始数组，然后输出其中不重复的元素。</p>
+</div>
+<div class="tabbed-block">
+<p>用筛选法求素数，输出 100 之内所有的素数，并统计个数。</p>
+</div>
+<div class="tabbed-block">
+<p>将两个随机生成的整型数组合并成一个有序整数数组。</p>
+</div>
+<div class="tabbed-block">
+<p>实现线性查找算法。随机生成一个整型数组并输出，从键盘输入要查找的值，输出要查找的数值第一次出现所在的下标，如果该值不在数组中，则输出 “该元素不存在！”</p>
+</div>
+<div class="tabbed-block">
+<p>设计二分查找算法。要求同第四题。</p>
+</div>
+<div class="tabbed-block">
+<p>实现冒泡排序、选择排序与插入排序。</p>
+<p>并随机产生一个数组，对其按照从小到大排序，要求输出排序前后的数组元素的值。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="7:5"><input checked="checked" id="1-统计奇偶数" name="__tabbed_7" type="radio" /><input id="2-矩阵加法乘法" name="__tabbed_7" type="radio" /><input id="3-杨辉三角" name="__tabbed_7" type="radio" /><input id="4-二维数组鞍点" name="__tabbed_7" type="radio" /><input id="5-学生成绩计算" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="1-统计奇偶数">1. 统计奇偶数</label><label for="2-矩阵加法乘法">2. 矩阵加法乘法</label><label for="3-杨辉三角">3. 杨辉三角</label><label for="4-二维数组鞍点">4. 二维数组鞍点</label><label for="5-学生成绩计算">5. 学生成绩计算</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>随机产生 20 个不大于 10 的自然数，将其存储在一个二维数组中，且偶数与奇数分别存储在不同列上。输出该数组并统计偶数与奇数的个数。</p>
+</div>
+<div class="tabbed-block">
+<p>实现两个矩阵的相关操作，包括矩阵的加法和矩阵的乘法。</p>
+</div>
+<div class="tabbed-block">
+<p>输出杨辉三角形前 10 行。格式如下：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>1
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>1 1
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>1 2 1
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>1 3 3 1
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>...
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>找出二维数组中的所有鞍点，即该位置的元素在该行上最大，但是在该列上最小。可能有多个鞍点，也有可能没有鞍点。</p>
+</div>
+<div class="tabbed-block">
+<p>一个学习小组有 N 个人，每个人有 M 门课的考试成绩，输入每门课的学分以及每名学生的成绩。</p>
+<ol>
+<li>
+<p>输出每门课的平均成绩。</p>
+</li>
+<li>
+<p>假设每个课程有不同的学分，计算每人的加权平均分与平均学分绩点 GPA 成绩。90 以上绩点为 4，80 到 90 绩点为 3，70 到 80 绩点为 2，60 到 70 绩点为 1，60 以下绩点为 0。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="_8">第七次上机<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:7"><input checked="checked" id="1-水仙花数" name="__tabbed_8" type="radio" /><input id="2-完数" name="__tabbed_8" type="radio" /><input id="3-验证哥德巴赫猜想" name="__tabbed_8" type="radio" /><input id="4-统计指定字符" name="__tabbed_8" type="radio" /><input id="5-二进制转化" name="__tabbed_8" type="radio" /><input id="6-按顺序排列" name="__tabbed_8" type="radio" /><input id="7-判断日期有效性" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="1-水仙花数">1. 水仙花数</label><label for="2-完数">2. 完数</label><label for="3-验证哥德巴赫猜想">3. 验证哥德巴赫猜想</label><label for="4-统计指定字符">4. 统计指定字符</label><label for="5-二进制转化">5. 二进制转化</label><label for="6-按顺序排列">6. 按顺序排列</label><label for="7-判断日期有效性">7. 判断日期有效性</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>水仙花数是一个三位数，其各位数字的立方和等于它本身，请设计一个函数 <code class="language-c highlight"><span class="kt">int</span><span class="w"> </span><span class="n">IsDaffodil</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">)</span></code>, 判断 <code>number</code> 是否为水仙花数，主函数中调用该函数并输出所有的水仙花数.</p>
+</div>
+<div class="tabbed-block">
+<p>一个整数的所有因子 (包括 1，但不包括本身) 之和等于该数，则该数称为完数（1 不是完数）. 例如 6 是一个完数，因为 6=1+2+3. 编写一个 <code>IsPerfectnum</code> 函数，判断参数 number 是否为完数。利用该函数判断并打印 1 到 1000 之间的所有完数.</p>
+</div>
+<div class="tabbed-block">
+<p>编写程序验证猜想：一个不小于 6 的偶数可以表示成两个素数之和。如 6＝3＋3,8＝3＋5,10＝3＋7…… 在主函数中输入一个大于 6 的偶数 n, 例如 34, 输出如下形式：34＝3＋31. 如果输入的数不满足要求则要能够重新输入.</p>
+</div>
+<div class="tabbed-block">
+<p>使用函数统计指定数字的个数，读入一个整数，统计并输出该数中 “2” 的个数，要求定义函数 <code class="language-c highlight"><span class="kt">int</span><span class="w"> </span><span class="n">CountDigit</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">digit</span><span class="p">)</span></code>, 它的功能是统计整数 number 中数字 digit 的个数，例如 CountDigit (12292,2) 的返回值是 3.(注意测试特殊情况，如 number 是 0,digit 也是 0, 那么结果应该是 1 个).</p>
+</div>
+<div class="tabbed-block">
+<p>编写函数将一个不大于 1000 的十进制自然数转换成二进制数，并在主函数中调用该函数进行测试 (不需考虑高位的 0).</p>
+</div>
+<div class="tabbed-block">
+<p>编写一个函数，判断一个整数从高位到低位各位数字是否按值从小到大排列。在主函数中输入若干个整数，并调用该函数，输出满足上述条件的数 (注意测试个位数).</p>
+</div>
+<div class="tabbed-block">
+<p>在主函数中输入一个日期，设计判断日期有效性的函数 <code class="language-c highlight"><span class="kt">int</span><span class="w"> </span><span class="n">isValidDate</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">month</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="p">)</span></code>, 判断闰年的函数 <code class="language-c highlight"><span class="kt">int</span><span class="w"> </span><span class="n">isLeap</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="p">)</span></code>, 以及判断当前日期为当年第几天的函数 <code class="language-c highlight"><span class="kt">int</span><span class="w"> </span><span class="n">days</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">month</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="p">)</span></code>. 主函数中输入日期的年、月、日，用循环保证输入有效日期 (当输入错误或日期无效时，重新输入), 然后输出该日期为当年的第几天.</p>
+</div>
+</div>
+</div>
+<h3 id="_9">第八次上机<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:7"><input checked="checked" id="1-交换函数" name="__tabbed_9" type="radio" /><input id="2-求和与差" name="__tabbed_9" type="radio" /><input id="3-拆分实数" name="__tabbed_9" type="radio" /><input id="4-数组元素统计" name="__tabbed_9" type="radio" /><input id="5-数组逆序存储" name="__tabbed_9" type="radio" /><input id="6-翻转二维数组" name="__tabbed_9" type="radio" /><input id="7-删除指定元素" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="1-交换函数">1. 交换函数</label><label for="2-求和与差">2. 求和与差</label><label for="3-拆分实数">3. 拆分实数</label><label for="4-数组元素统计">4. 数组元素统计</label><label for="5-数组逆序存储">5. 数组逆序存储</label><label for="6-翻转二维数组">6. 翻转二维数组</label><label for="7-删除指定元素">7. 删除指定元素</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>编写 Swap 函数，交换两个整型变量的值，并在主函数中进行测试 (输出函数调用前后两个整型变量的值和).</p>
+<p>提示：指针作为参数，通过指针改变实参的值。</p>
+</div>
+<div class="tabbed-block">
+<p>只调用一个函数得到两个数的和与差.</p>
+<p>提示：指针作为参数，实现返回多个值。</p>
+<p>函数可声明为 <code class="language-c highlight"><span class="kt">void</span><span class="w"> </span><span class="n">Sum_Diff</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">op1</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">op2</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">psum</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">pdiff</span><span class="p">)</span></code>, 将主函数中表示和与差的变量的地址作为实参，传递给指针 <code>psum</code> 和 <code>pdiff</code>, 在被调函数中计算和与差并赋值给 <code>*psum</code> 和 <code>*pdiff</code>, 从而将和与差写入主函数中表示和与差的变量的内存中，即可在主函数得到和与差，进行输出.</p>
+</div>
+<div class="tabbed-block">
+<p>编写一个函数，将一个实数拆分成整数和小数部分，编写该函数，并在主函数中调用，对其进行测试.</p>
+</div>
+<div class="tabbed-block">
+<p>编写一个函数，计算一个长度为 n 的整型数组 a 中元素的最大值、最小值以及所有元素的均值，在主函数数中调用该函数并输出三个计算的结果.</p>
+</div>
+<div class="tabbed-block">
+<p>写一个函数，实现数组的逆序存储，比如数组元素一开始是 {12,34,56}, 函数调用之后，变成 {56,34,12}, 在主函数中调用该函数进行测试，在函数调用之前和之后分别输出数组元素 (用符号常量作为数组长度).</p>
+</div>
+<div class="tabbed-block">
+<p>编写函数将一个 N*N 的二维数组以对角线为轴翻转。在主函数中对该函数进行测试，输出函数调用前后二维数组元素的值.</p>
+</div>
+<div class="tabbed-block">
+<p>编写函数 <code class="language-c highlight"><span class="kt">void</span><span class="w"> </span><span class="n">delElem</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span></code>, 实现从一个整型数组中删除下标为 k 的元素，请使用指针操作。在主函数中对该函数进行测试.</p>
+</div>
+</div>
+</div>
+<h3 id="_10">第九次上机<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="必做题" name="__tabbed_10" type="radio" /><input id="b-选做题" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="必做题">必做题</label><label for="b-选做题">B. 选做题</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="11:5"><input checked="checked" id="1str函数" name="__tabbed_11" type="radio" /><input id="2-删除指定子串" name="__tabbed_11" type="radio" /><input id="3-替换指定子串" name="__tabbed_11" type="radio" /><input id="4-字典排序" name="__tabbed_11" type="radio" /><input id="5-回文字符串" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="1str函数">1.<code>str</code>函数</label><label for="2-删除指定子串">2. 删除指定子串</label><label for="3-替换指定子串">3. 替换指定子串</label><label for="4-字典排序">4. 字典排序</label><label for="5-回文字符串">5. 回文字符串</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>编写以下三个函数实现标准库中的 <code>strlen</code>, <code>strcpy</code> 和 <code>strcat</code> 的功能，并在主函数中对该函数进行测试.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">myStrLen</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="p">[]);</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">myStrcpy</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="n">src</span><span class="p">);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">myStrCat</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">[]);</span>
+</span></code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>删除字符串 str1 中的所有子串 str2. 如 str1="abcdabac",str2="ab", 计算结果：str1="cdac".</p>
+<p>编写辅助函数：
+<div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">myStrstr</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="n">sub</span><span class="p">);</span><span class="w">     </span><span class="c1">// 实现库函数 strstr 的功能；</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">char</span><span class="o">*</span><span class="nf">delSubstr</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">sub</span><span class="p">);</span><span class="w">    </span><span class="c1">// 删除字符串 str 中第一个子串 sub, 返回删除位置.</span>
+</span></code></pre></div></p>
+<p>合理调用辅助函数，在主函数中测试删除字符串中所有子串的功能.</p>
+</div>
+<div class="tabbed-block">
+<p>把字符串 str1 中的所有子串 str2 替换为 str3. 如 str1="abcdabac",str2="ab",str3="xyz", 计算结果：str1="xyzcdxyzac".</p>
+<p>编写 replace 函数，并在主函数中测试。函数原型为 <code class="language-c highlight"><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">replace</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">substr1</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">substr2</span><span class="p">)</span></code>，返回 <code>str</code> 的首地址.</p>
+<p>注意，替换过程中新产生的 str2 不可以被替换.</p>
+</div>
+<div class="tabbed-block">
+<p>编写一个书名排序程序，输入 10 个书名存入一个二维字符数组，每个书名最长 30 个字符，用函数 <code class="language-c highlight"><span class="kt">void</span><span class="w"> </span><span class="n">sortStr</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">s</span><span class="p">)[</span><span class="mi">30</span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span></code> 实现它们的字典顺序，在 <code>main</code> 函数输出结果.</p>
+</div>
+<div class="tabbed-block">
+<p>abba 是回文，level 是回文。编写一个函数，判断一个单词 (字符串) 是否是” 回文”, 请用函数递归的思想实现.</p>
+<p>思路：如果一个字符串的首尾字符相同，且去掉首尾的子串也是回文，那么这个字符串就是回文字符串.</p>
+<p>函数原型：<code class="language-c highlight"><span class="kt">int</span><span class="w"> </span><span class="n">isPalindrome</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">)</span></code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="1-最长公共子串" name="__tabbed_12" type="radio" /><input id="2-统计单词" name="__tabbed_12" type="radio" /><input id="3-单词倒序" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="1-最长公共子串">1. 最长公共子串</label><label for="2-统计单词">2. 统计单词</label><label for="3-单词倒序">3. 单词倒序</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>计算两个字符串的最长公共子串.</p>
+</div>
+<div class="tabbed-block">
+<p>录入一篇英文文章 (存放在字符数组 a [n] 中), 统计单词个数，并按照单词的长度由小到大依次输出各个单词。假定这段文章不超过 80 个字符，单词不超过 20 个.</p>
+</div>
+<div class="tabbed-block">
+<p>编写程序，实现将一行字符按单词倒序输出。如输入 "I love you", 输出 "you love I".</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="_11">第十次上机<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:4"><input checked="checked" id="1-回文词" name="__tabbed_13" type="radio" /><input id="2-字典序排列" name="__tabbed_13" type="radio" /><input id="3-职工信息" name="__tabbed_13" type="radio" /><input id="4-单向链表" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="1-回文词">1. 回文词</label><label for="2-字典序排列">2. 字典序排列</label><label for="3-职工信息">3. 职工信息</label><label for="4-单向链表">4. 单向链表</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>判断单词是否为回文词，若是，则返回 1, 否则返回 0.</p>
+</div>
+<div class="tabbed-block">
+<p>完成下面未完成的程序，实现人名按字典序排列并输出.</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cp">#define M 5        </span><span class="c1">// 定义符号常量 M 表示人名的个数</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">sortStr</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">pPerson</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1">// 对指针数组 pPerson 中的 n 个元素指向的字符串，进按字典顺序进行升序排序</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">input</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">)[</span><span class="mi">30</span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1">// 从键盘读入 n 个名字，放入 p 指向的二维数组中</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">()</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">{</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="p">[</span><span class="n">M</span><span class="p">][</span><span class="mi">30</span><span class="p">];</span><span class="w">        </span><span class="c1">// 定义字符数组存放 M 个人名</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;请输入 5 个名字：</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="n">input</span><span class="w"> </span><span class="p">(</span><span class="n">person</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">);</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="c1">// 调用 input 函数，从键盘读入 M 的名字，写入 person 数组</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">pPerson</span><span class="w"> </span><span class="p">[</span><span class="n">M</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">};</span><span class="w">    </span><span class="c1">// 定义字符指针数组</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">M</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">        </span><span class="n">pPerson</span><span class="w"> </span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="c1">// 循环对 pPerson 数组中元素赋值，使其分别指向二维数组 person 中的 M 个人名</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;排序后：</span><span class="se">\n</span><span class="s">-------------------------</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="n">sortStr</span><span class="w"> </span><span class="p">(</span><span class="n">pPerson</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">);</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">M</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">        </span><span class="n">puts</span><span class="w"> </span><span class="p">(</span><span class="n">pPerson</span><span class="w"> </span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">    </span><span class="c1">// 循环输出排好序的人名</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p class="annotate">使用结构体表示员工的信息(职工号、姓名、生日(1)和工资).</p>
+<ol>
+<li>生日也为一个结构体类型,包含年、月、日.</li>
+</ol>
+<p>输入n名员工的信息,按照工资升序排序并输出所有员工的数据.</p>
+</div>
+<div class="tabbed-block">
+<p>建立一个单向链表,每个结点应包含整型数据和指针两个域.</p>
+<p>编写函数实现链表的输出、逆向输出、尾插、删除特定数据的结点.</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年1月18日 17:29:19</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年1月18日 17:29:19</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 说明">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                说明
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../tags/" class="md-footer__link md-footer__link--next" aria-label="下一页: 标签页">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                标签页
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 - 2024 Owen Li. All Rights Reserved.<br>
+Code licensed under the <a href="https://opensource.org/license/MIT target="_blank" rel="noopener">MIT License</a>. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY 4.0</a>.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/383910359" target="_blank" rel="noopener" title="Bilibili" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0q13.2 0 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0q13.2 0 21.9 8.603c5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/lixingjian-C" target="_blank" rel="noopener" title="Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navifation.instant", "navifation.instant.progress", "navifation.tracking", "navigation.tabs", "navigation.prune", "toc.follow", "navigation.top", "search.suggest", "search.share", "header.autohide", "navigation.footer", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
