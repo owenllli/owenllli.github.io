@@ -1,37 +1,37 @@
 site_name: 鲤鱼的小站
-#site_url: https://lixingjian-c.github.io/ #本地运行时注释掉
+#site_url: https://owenllli.github.io/ #本地运行时注释掉
 nav: # 配置网页体系
   - 首页: index.md
   - 博客:
-    - blog/index.md
-    #- blog/authos.md # 作者信息页,如有即可设置
-    - 博客测试页面: blog/posts/blogSample.md
+      - blog/index.md
+      #- blog/authos.md # 作者信息页,如有即可设置
+      - 博客测试页面: blog/posts/blogSample.md
   - 语言:
-    - language/index.md
-    - Markdown 基本语法:
-      - language/markdown/index.md
-      - 警示块: language/markdown/admonitions.md
-      - 注解: language/markdown/annotations.md
-      - 按钮: language/markdown/buttons.md
-      - 代码块: language/markdown/code-blocks.md
-      - 选项卡: language/markdown/content-tabs.md
-      - 数据表: language/markdown/data-tables.md
-      - 图表: language/markdown/diagrams.md
-      - 脚注: language/markdown/footnotes.md
-      - 设置格式: language/markdown/formatting.md
-      - 网格: language/markdown/grid.md
-      - 图标和表情: language/markdown/icons-and-emojis.md
-      - 图片: language/markdown/images.md
-      - 列表: language/markdown/lists.md
-      - 数学功能: language/markdown/math.md
-      - 提示信息: language/markdown/tooltips.md
-    - C/C++:
-      - language/candcpp/index.md
-      - 上机备份: language/candcpp/codebackup.md
+      - language/index.md
+      - Markdown 基本语法:
+          - language/markdown/index.md
+          - 警示块: language/markdown/admonitions.md
+          - 注解: language/markdown/annotations.md
+          - 按钮: language/markdown/buttons.md
+          - 代码块: language/markdown/code-blocks.md
+          - 选项卡: language/markdown/content-tabs.md
+          - 数据表: language/markdown/data-tables.md
+          - 图表: language/markdown/diagrams.md
+          - 脚注: language/markdown/footnotes.md
+          - 设置格式: language/markdown/formatting.md
+          - 网格: language/markdown/grid.md
+          - 图标和表情: language/markdown/icons-and-emojis.md
+          - 图片: language/markdown/images.md
+          - 列表: language/markdown/lists.md
+          - 数学功能: language/markdown/math.md
+          - 提示信息: language/markdown/tooltips.md
+      - C/C++:
+          - language/candcpp/index.md
+          - 上机备份: language/candcpp/codebackup.md
   - 标签页: tags.md
 theme:
   name: material #主题设置
-  #repo_url: https://github.com/lixingjian-C/lixingjian-C.github.io
+  #repo_url: https://github.com/owenllli/owenllli.github.io
   #repo_name: 个人站点
   custom_dir: overrides # 主题扩展(覆写)文件夹
   icon:
@@ -157,7 +157,7 @@ extra:
       link: https://space.bilibili.com/383910359
       name: Bilibili
     - icon: fontawesome/brands/github
-      link: https://github.com/lixingjian-C
+      link: https://github.com/owenllli
       name: Github
     #- X/Twitter
     #- Patron
