@@ -909,15 +909,15 @@
 
 === "1. 求最小元素"
 
-    现定义函数模板`min`，该模板可以返回数组中的最小元素。
+    现定义函数模板 `min`，该模板可以返回数组中的最小元素。
 
-    请你定义该模板，然后使用`int`数组、`Box`数组（`Box`类具有长、宽、高）对该模板进行测试。
+    请你定义该模板，然后使用 `int` 数组、`Box` 数组（`Box` 类具有长、宽、高）对该模板进行测试。
 
     并请根据需要完成必要的运算符重载。
 
 === "2. 程序设计"
 
-    请根据以下已给出的类模板`SafeArray`的部分代码，完成该类模板的完整定义，并在主函数中用`int`序列和`Box`序列对`SafeArray`模板进行测试。`Box`类的说明与第一题相同。
+    请根据以下已给出的类模板 `SafeArray` 的部分代码，完成该类模板的完整定义，并在主函数中用 `int` 序列和 `Box` 序列对 `SafeArray` 模板进行测试。`Box` 类的说明与第一题相同。
 
     请注意：要求所有的类函数都在类外定义。
 
@@ -926,15 +926,251 @@
     class SafeArray
     {
     public:
-        SafeArray(int s); //构造函数
-        T& operator[](int index); //根据索引访问某一元素，注意：该下标访问越界应有提示
-        void sort(); //升序排序（使用插入排序）
-        T sum(); //数组元素求和
-        void print(); //输出数组内容
+        SafeArray (int s); // 构造函数
+        T& operator [](int index); // 根据索引访问某一元素，注意：该下标访问越界应有提示
+        void sort (); // 升序排序（使用插入排序）
+        T sum (); // 数组元素求和
+        void print (); // 输出数组内容
     protected:
         int size;
-        T element[5];
+        T element [5];
     };
     ```
 
 ### 上机题
+
+=== "1. C++ 语法基础"
+
+    题目缺失，故不放出。
+
+=== "2. 类与对象"
+
+    实现短消息系统，输出要与截图一致（截图略）。
+
+    按要求完成短信类的实现，使得 `main` 函数正常运行，但不得修改 `main` 函数与 `Message` 类结构。
+
+    1. `$cpp send ()` 函数一般返回发送的字符串到短消息网关，但在本例中，该函数中直接输出相关信息；类的其他函数不做输入输出。
+
+    2. 要搞清楚本例字符串成员的两种存储方式
+
+    3. 要搞清楚构造函数、拷贝构造函数以及析构函数
+    
+    ```cpp
+    #pragma warning (disable:4996) // 非 visual studio 2022 环境则删除此行
+    #include<iostream>
+    #include<cstring>
+    #include<ctime>
+    using namespace std;
+
+    // 类结构不要更改
+    class Message {        // 短消息类
+    private:
+        char* body;      // 消息正文
+        char from [20];   // 发送者
+        char to [20];     // 接受者
+    static int sucessCnt; // 成功发送消息数量
+    public:
+        // 参数为消息正文、发送者、接受者；若参数 b 为空指针，body 为空指针；
+    // 若参数 f、t 为空指针，from、to 为空串（即字符数组开头字符为 \0）；
+        Message (const char* b=NULL,  const char* f=NULL, const char* t=NULL);
+        Message (const Message & m);
+        ~Message ();
+        // 发送短消息，消息正文 (不空指针并且不空串)、发送者（不空串）、接受者（不空串）
+    // 都不空时发送成功返回 1，失败返回 0
+        int send (); // 此函数里面允许把发送内容直接写输出。    
+        static int getSucessCnt ();     // 获得成功发送消息数量
+    };
+    // 完成 Message 类的实现 
+
+    ...
+
+    //main 函数不要更改。
+    int main () {
+        Message ms1 ("hello", "zhangsan", "lisi");
+        if (ms1.send ())
+            cout << "发送成功" << endl;
+        
+        Message ms2 ("hello");
+        if (ms2.send ())
+            cout << "发送成功" << endl;
+        else
+            cout << "发送失败" << endl;
+        
+        Message ms3=ms1;
+        if (ms3.send ())
+            cout << "发送成功" << endl;
+        else
+            cout << "发送失败" << endl;
+        
+    cout << "发送成功消息数量" << Message::getSucessCnt () << endl;
+    }
+    ```
+
+=== "3. 运算符重载"
+
+    使用 C++ 的数组实现 “长度可变数组类” `MyArray`。该类结构如下。
+    为该类添加必要的函数并重载所需的运算符，使主函数能够运行并得到目标输出。程序输出示意图略。
+    不可以修改 `MyArray` 结构，不可以修改 `main` 函数。
+    提示：可以分段完成，先完成 `arr1` 相关，再完成 `arr2` 相关，最后完成 `arr3`。
+
+    ```cpp
+    #include <iostream>
+    using namespace std;
+
+    class MyArray {
+    public:
+        ……
+    private:
+        int* arr; // 指向动态分配的数组的指针
+        int size; // 数组的大小
+    };
+
+    // 不要修改 main 函数
+    int main () {
+        // 创建一个 size 是 3 的整数数组 
+        MyArray arr1 (3);
+        arr1 [0] = 0;
+        arr1 [1] = 1;
+        arr1 [2] = 2;
+
+        // 输出数组 1 的大小和所有元素 
+        cout << "Array 1 size:" << arr1 () << endl;
+        cout << "Array 1 contents:" << arr1 << endl;
+        
+        // 数组大小 - 1, 并丢掉最后一个元素 
+        arr1--;
+        
+        MyArray arr2 (2);
+        arr2 [0] = 10;
+        arr2 [1] = 11;
+    
+        // 数组大小 + 2 
+        ++++arr2;
+        // 数组最后两个元素赋值 
+        arr2 [arr2 ()-2]=12; 
+        arr2 [arr2 ()-1]=13; 
+        
+        // 输出数组 2 的大小和所有元素 
+        cout << "Array 2 size:" << arr2 () << endl;
+        cout << "Array 2 contents:" << arr2 << endl;
+    
+    // 连接两个数组成一个新的数组
+    MyArray arr3;
+    arr3 = arr1 + arr2;
+        cout << "Array 3 contents:" << arr3 << endl;
+        cout << "Array 3 size:" << arr3 () << endl;
+
+        return 0;
+    }
+    ```
+
+=== "4. 继承与多态"
+
+    === "第一题"
+
+        用面向对象方法设计并完成一个计算器控制台程序。
+
+        1. 设计一个父类 Operation, 数据成员包含两个操作数 m_numberA，m_numberB。 成员函数包括 `set ()`,`get ()` 函数设置操作数的值，虚函数 `GetResult ()` 用于输出结果。
+
+        2. 分别设计派生类 OperationAdd，OperationSub，OperationMul， OperationDiv 实现加减乘除操作，注意除法操作除数不能为 0。
+
+        3. 派生类统一继承自父类 Operation, 重写虚函数 `GetResult ()` 输出操作后的结果。
+
+        4. OperationFactory 类已经写好，可以直接使用。
+
+        测试代码：
+        ```cpp
+        class  OperationFactory {
+        public:
+        static Operation * CreateOperate (char oper) 
+        {
+            Operation * poper = NULL;
+                switch (oper) 
+                {
+                            case '+':
+                                poper = new OperationAdd;
+                                break;
+                            case '-':
+                                poper = new OperationSub;
+                                break;
+                            case '*':
+                                poper = new OperationMul;
+                                break;
+                            case '/':
+                                poper = new OperationDiv;
+                                break;
+                    }
+                return poper;
+            }
+        };
+        int  main ()
+        {
+            int flag = 1;
+            while (flag)
+            {
+                cout << "input A:";
+                double numA;
+                cin >> numA;
+                cout << "input operator:";
+                char oper;
+                cin >> oper;
+                cout << "input B:";
+                double numB;
+                cin >> numB;
+                Operation* poper = OperationFactory::CreateOperate (oper);
+                poper->SetNumA (numA);
+                poper->SetNumB (numB);
+                cout << poper->GetNumA () << ' ' << oper << ' ' << poper->GetNumB () << "=" << poper->GetResult () << endl;
+                cout << "是否需要继续: (0/1)";
+                cin >> flag;
+            }
+            return 0;
+        }
+       ```
+
+    === "第二题"
+
+        完成本科类、研究生类、教师类、助教类、课程类以及学生列表类的设计。简述类的关系，完成类的框架以体现类的结构与关系。
+
+        （1）课程有名称与课程号。
+
+        （2）本科类有身份号码、姓名、学号、专业。研究生有身份号码、姓名、学号、专业、研究方向。教师数据有身份号码，姓名、教工号、若干授课课程。要求运用继承的思想设计本科生、研究生和教师类（不需要非常完备的功能）。这些类都具有 `show ()` 函数用来显示各自的信息。
+
+        （3）部分研究生可以担任助教，除了研究生的数据之外还具有编号（助教专用编号）。每个助教可以为一位老师的一门课程助课（只能一门课程），助教可以批作业。
+
+        （4）学生列表包含所有学生，具有 `show ()` 函数，该函数运行则列表中所有学生均可调用其 `show ()` 函数显示各自信息：输出本科生以及研究生的基本信息，担任助教的研究生可以显示助课信息（为哪位老师助课，课程名）。
+
+        （5）在主函数测试本科生、研究生、教师、课程以及助教类。为助教指派助课任务后，教师可以让助教批作业。通过创建学生列表显示所有学生信息。
+        本题主要考察继承、多态以及类的关系。
+
+=== "5. 模板与异常"
+
+    完成联系人 `Contact` 类。联系人 `Contact` 类拥有以下属性：姓名 (`string`)、性别 (`char`) 以及联系电话 (`string`)。根据以下主函数完成 `Contact` 类。
+
+    注意：联系人的性别只能是 `M/F/m/f`，如果是其他字符则 `setSex ()` 函数抛出异常；联系人的电话应是 `8` 位 `0` 到 `9` 的数字，如格式不符合设定要求则 `setPhone ()` 函数抛出异常。
+
+    ```cpp
+    int main ()
+    {
+        string name;
+        char sex;
+        string phone;
+        cin >> name >> sex >> phone;
+        Contact c1 (name);
+        try
+        {
+            c1.setPhone (phone);
+            c1.setSex (sex);
+            c1.show ();
+        }
+        catch (char sex)
+        {
+            cout << "Not a gender:" << sex << endl;
+        }
+        catch (string& phone)
+        {
+            cout << "Invalid phone number:" << phone << endl;
+        }
+        return 0;
+    }
+    ```
