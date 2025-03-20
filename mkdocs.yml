@@ -28,6 +28,10 @@ nav: # 配置网页体系
       - C/C++:
           - language/candcpp/index.md
           - 上机备份: language/candcpp/codebackup.md
+  - 小玩意:
+      - stuffs/index.md
+      - 赛博老虎机:
+          - stuffs/CyberSlotMachine.md
   - 标签页: tags.md
 theme:
   name: material #主题设置
